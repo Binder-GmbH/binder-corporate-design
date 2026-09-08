@@ -37,28 +37,27 @@ The scale runs 100 (lightest) to 900 (darkest), the same direction as CSS
 White and black carry no number. They sit outside the ramp, exactly as `$white` and
 `$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.
 
-| Name | Scale | Hex | CMYK | L\* | Step | CMYK, screen match (not for print) |
-|---|---|---|---|---|---|---|
-| **White** | — | `#ffffff` | 0/0/0/0 | 100.0 | — | 0/0/0/0 |
-| **Porcelain** | 100 | `#f4f4f5` | 0/0/0/10 | 96.2 | 3.8 | 0/0/0/4 |
-| **Pearl** | 200 | `#e6e6e9` | 0/0/0/15 | 91.4 | 4.8 | 1/1/0/9 |
-| **Silver** | 300 | `#d8d8dd` | 0/0/0/25 | 86.5 | 4.9 | 2/2/0/13 |
-| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 | 4/4/0/25 |
-| **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 | 4/4/0/37 |
-| **Slate** | 600 | `#7a7a82` | 0/0/0/50 | 51.5 | 12.3 | 6/6/0/49 |
-| **Basalt** | 700 | `#5a5a5f` | 0/0/0/65 | 38.4 | 13.1 | 5/5/0/63 |
-| **Anthracite** | 800 | `#404043` | 0/0/0/75 | 27.2 | 11.2 | 4/4/0/74 |
-| **Graphite** | 900 | `#252527` | 0/0/0/85 | 14.8 | 12.4 | 5/5/0/85 |
-| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 | 0/0/0/100 |
+| Name | Scale | Hex | CMYK | L\* | Step |
+|---|---|---|---|---|---|
+| **White** | — | `#ffffff` | 0/0/0/0 | 100.0 | — |
+| **Porcelain** | 100 | `#f4f4f5` | 0/0/0/10 | 96.2 | 3.8 |
+| **Pearl** | 200 | `#e6e6e9` | 0/0/0/15 | 91.4 | 4.8 |
+| **Silver** | 300 | `#d8d8dd` | 0/0/0/25 | 86.5 | 4.9 |
+| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 |
+| **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 |
+| **Slate** | 600 | `#7a7a82` | 0/0/0/50 | 51.5 | 12.3 |
+| **Basalt** | 700 | `#5a5a5f` | 0/0/0/65 | 38.4 | 13.1 |
+| **Anthracite** | 800 | `#404043` | 0/0/0/75 | 27.2 | 11.2 |
+| **Graphite** | 900 | `#252527` | 0/0/0/85 | 14.8 | 12.4 |
+| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 |
 
 L\* is perceived lightness, 0 black to 100 white. Step is the distance to the
 previous gray.
 
-The CMYK column is for anything that gets printed: pure K, because the few percent of
-cyan and magenta in the screen values cannot be reproduced reliably in offset printing.
-The screen-match column is the screen value converted to CMYK without a profile. Use it
-only for a CMYK document that is viewed on screen and must match the web colors exactly,
-such as a digital flyer or a PDF that is never printed.
+The CMYK values are pure K, matched to the screen values by lightness. That works for
+the light and middle grays. From Slate 600 down, pure K prints lighter than the screen
+value, because 100 % K on coated stock only reaches about L\* 20: in print, the dark
+grays sit a step or two lighter than on screen. Do not compensate with rich black.
 
 The ramp is denser at the light end on purpose: pale surface tones get used over
 large areas, where small differences matter. The dark half steps more widely, because

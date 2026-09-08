@@ -44,9 +44,7 @@ as `$white` and `$black` do in Bootstrap.
 **Hex is for screen, CMYK is for print — do not convert between them.** The
 grays carry a slight blue cast on screen but print as pure K. Converted
 exactly, the cast comes to a few percent of cyan and magenta, which offset printing
-cannot reproduce reliably. The one exception is a CMYK document that is only viewed on
-screen, such as a digital flyer: for that, take the screen-match values from the
-gray scale table in [colors.md](colors.md).
+cannot reproduce reliably.
 
 **The corporate typeface is free.** Source Sans 3 is open source — get it from
 Google Fonts, Adobe Fonts or GitHub, no license to buy. It replaced FF Meta
