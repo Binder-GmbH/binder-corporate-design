@@ -37,19 +37,19 @@ The scale runs 100 (lightest) to 900 (darkest), the same direction as CSS
 White and black carry no number. They sit outside the ramp, exactly as `$white` and
 `$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.
 
-| Name | Scale | Hex | CMYK | L\* | Step |
-|---|---|---|---|---|---|
-| **White** | — | `#ffffff` | 0/0/0/0 | 100.0 | — |
-| **Porcelain** | 100 | `#f4f4f5` | 0/0/0/5 | 96.2 | 3.8 |
-| **Pearl** | 200 | `#e6e6e9` | 0/0/0/10 | 91.4 | 4.8 |
-| **Silver** | 300 | `#d8d8dd` | 0/0/0/20 | 86.5 | 4.9 |
-| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 |
-| **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 |
-| **Slate** | 600 | `#7a7a82` | 0/0/0/60 | 51.5 | 12.3 |
-| **Basalt** | 700 | `#5a5a5f` | 0/0/0/70 | 38.4 | 13.1 |
-| **Anthracite** | 800 | `#404043` | 0/0/0/80 | 27.2 | 11.2 |
-| **Graphite** | 900 | `#252527` | 0/0/0/90 | 14.8 | 12.4 |
-| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 |
+| Name | Scale | Hex | CMYK | L\* | Step | CMYK, screen match (not for print) |
+|---|---|---|---|---|---|---|
+| **White** | — | `#ffffff` | 0/0/0/0 | 100.0 | — | 0/0/0/0 |
+| **Porcelain** | 100 | `#f4f4f5` | 0/0/0/5 | 96.2 | 3.8 | 0/0/0/6 |
+| **Pearl** | 200 | `#e6e6e9` | 0/0/0/10 | 91.4 | 4.8 | 1/0/0/13 |
+| **Silver** | 300 | `#d8d8dd` | 0/0/0/20 | 86.5 | 4.9 | 3/3/0/18 |
+| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 | 8/7/0/31 |
+| **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 | 9/9/0/46 |
+| **Slate** | 600 | `#7a7a82` | 0/0/0/60 | 51.5 | 12.3 | 11/11/0/61 |
+| **Basalt** | 700 | `#5a5a5f` | 0/0/0/70 | 38.4 | 13.1 | 12/10/0/77 |
+| **Anthracite** | 800 | `#404043` | 0/0/0/80 | 27.2 | 11.2 | 11/12/0/89 |
+| **Graphite** | 900 | `#252527` | 0/0/0/90 | 14.8 | 12.4 | 11/9/0/100 |
+| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 | 0/0/0/100 |
 
 L\* is perceived lightness, 0 black to 100 white. Step is the distance to the
 previous gray.
@@ -60,6 +60,10 @@ From Slate 600 down it cannot: 100 % K on coated stock is about L\* 17, so the d
 print in even steps that are lighter than on screen but stay distinguishable from black.
 Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer
 simulates these values through the document profile, so they look right there too.
+
+The screen-match column is the CMYK mix under FOGRA39 that reproduces the screen color
+exactly, cast included: only for a CMYK document that is viewed on screen and must match
+the web colors, never for print.
 
 The ramp is denser at the light end on purpose: pale surface tones get used over
 large areas, where small differences matter. The dark half steps more widely, because

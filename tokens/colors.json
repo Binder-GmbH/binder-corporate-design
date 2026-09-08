@@ -62,67 +62,78 @@
       "name": "White",
       "scale": null,
       "hex": "#ffffff",
-      "cmyk": "0/0/0/0"
+      "cmyk": "0/0/0/0",
+      "cmykScreenMatch": "0/0/0/0"
     },
     {
       "name": "Porcelain",
       "scale": 100,
       "hex": "#f4f4f5",
-      "cmyk": "0/0/0/5"
+      "cmyk": "0/0/0/5",
+      "cmykScreenMatch": "0/0/0/6"
     },
     {
       "name": "Pearl",
       "scale": 200,
       "hex": "#e6e6e9",
-      "cmyk": "0/0/0/10"
+      "cmyk": "0/0/0/10",
+      "cmykScreenMatch": "1/0/0/13"
     },
     {
       "name": "Silver",
       "scale": 300,
       "hex": "#d8d8dd",
-      "cmyk": "0/0/0/20"
+      "cmyk": "0/0/0/20",
+      "cmykScreenMatch": "3/3/0/18"
     },
     {
       "name": "Ash",
       "scale": 400,
       "hex": "#b8b8c0",
-      "cmyk": "0/0/0/30"
+      "cmyk": "0/0/0/30",
+      "cmykScreenMatch": "8/7/0/31"
     },
     {
       "name": "Concrete",
       "scale": 500,
       "hex": "#9a9aa1",
-      "cmyk": "0/0/0/45"
+      "cmyk": "0/0/0/45",
+      "cmykScreenMatch": "9/9/0/46"
     },
     {
       "name": "Slate",
       "scale": 600,
       "hex": "#7a7a82",
-      "cmyk": "0/0/0/60"
+      "cmyk": "0/0/0/60",
+      "cmykScreenMatch": "11/11/0/61"
     },
     {
       "name": "Basalt",
       "scale": 700,
       "hex": "#5a5a5f",
-      "cmyk": "0/0/0/70"
+      "cmyk": "0/0/0/70",
+      "cmykScreenMatch": "12/10/0/77"
     },
     {
       "name": "Anthracite",
       "scale": 800,
       "hex": "#404043",
-      "cmyk": "0/0/0/80"
+      "cmyk": "0/0/0/80",
+      "cmykScreenMatch": "11/12/0/89"
     },
     {
       "name": "Graphite",
       "scale": 900,
       "hex": "#252527",
-      "cmyk": "0/0/0/90"
+      "cmyk": "0/0/0/90",
+      "cmykScreenMatch": "11/9/0/100"
     },
     {
       "name": "Black",
       "scale": null,
       "hex": "#000000",
-      "cmyk": "0/0/0/100"
+      "cmyk": "0/0/0/100",
+      "cmykScreenMatch": "0/0/0/100"
     }
   ],
   "redScale": [
@@ -237,5 +248,6 @@
     "9": "ABDEGHIKL",
     "10": "ABDEGHIJKL",
     "11": "ABCDEGHIJKL"
-  }
+  },
+  "screenMatchNote": "cmykScreenMatch: the CMYK mix under Coated FOGRA39 (relative colorimetric, Y held at 0) with the smallest color difference to the screen value, cast included. For CMYK documents that are only viewed on screen. Not a print value."
 }
