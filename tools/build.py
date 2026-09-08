@@ -128,7 +128,7 @@ def build_markdown():
           "[`colors.css`](tokens/colors.css) and [`colors.scss`](tokens/colors.scss).", "",
           "**Hex values apply to screen, CMYK values apply to print.** The grays carry a slight blue",
           "cast on screen but print as pure K with no CMY component: converted exactly, the cast",
-          "comes to under 6 % cyan, and cyan that low cannot be reproduced reliably in offset",
+          "comes to a few percent of cyan and magenta, which offset printing cannot reproduce reliably",
           "printing. Use hex on screen and CMYK on paper.", "",
           "## Primary colors", "", "![Primary colors](assets/primary.svg)", "",
           "| Color | Hex | CMYK | Print references | Use |", "|---|---|---|---|---|"]

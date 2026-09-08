@@ -1,5 +1,5 @@
 {
-  "$comment": "BINDER corporate colors. Hex applies to screen, CMYK to print. Grays print as pure K: the slight blue cast of the screen values converts to under 6% cyan, below what offset printing reproduces reliably.",
+  "$comment": "BINDER corporate colors. Hex applies to screen, CMYK to print. Grays print as pure K: the slight blue cast of the screen values converts to a few percent of cyan and magenta, below what offset printing reproduces reliably.",
   "version": "2026",
   "scaleNote": "Nine grays numbered 100 (lightest) to 900 (darkest), the same direction as CSS font-weight, each with a name for talking to people. White and Black carry no number: they sit outside the ramp, as $white and $black do in Bootstrap and Tailwind.",
   "primary": {
