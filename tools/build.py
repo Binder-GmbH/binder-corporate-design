@@ -145,9 +145,9 @@ def build_markdown():
            "print in even steps that are lighter than on screen but stay distinguishable from black.",
            "Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer",
            "simulates these values through the document profile, so they look right there too.", "",
-           "The screen-match column is a maximum-K separation of the screen value, computed with",
-           "ArgyllCMS against Coated FOGRA39 with black point compensation: black carries the tone, a",
-           "few percent of cyan and magenta carry the cast. Only for a CMYK document that is viewed on screen and must match",
+           "The screen-match column is the print K value with a small cyan and magenta admixture, so",
+           "the gray carries the blue cast of the screen value; hue matched with ArgyllCMS against",
+           "Coated FOGRA39, K unchanged. Only for a CMYK document that is viewed on screen and must match",
            "the web colors, never for print."]
     md += ["", "The ramp is denser at the light end on purpose: pale surface tones get used over",
            "large areas, where small differences matter. The dark half steps more widely, because",
@@ -302,7 +302,7 @@ def build_page():
         h.append(f'<tr><td><strong>{r["name"]}</strong></td><td>{r["scale"] or "—"}</td>'
                  f'<td><code>{r["hex"]}</code></td><td>{r["cmyk"]}</td><td>{L:.1f}</td><td>{step}</td>'
                  f'<td class="muted">{r["cmykScreenMatch"]}</td></tr>'); prev = L
-    h.append('</table><p class="cap">The CMYK values are pure K, chosen with the Coated FOGRA39 press profile so that the printed gray has the same lightness as the screen value wherever black ink can reach it. From Slate 600 down it cannot: 100 % K on coated stock is about L* 17, so the dark grays print in even steps that are lighter than on screen but stay distinguishable from black. Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer simulates these values through the document profile, so they look right there too. The screen-match column is a maximum-K separation of the screen value, computed with ArgyllCMS against Coated FOGRA39 with black point compensation: black carries the tone, a few percent of cyan and magenta carry the cast. Only for a CMYK document that is viewed on screen and must match the web colors, never for print.</p>')
+    h.append('</table><p class="cap">The CMYK values are pure K, chosen with the Coated FOGRA39 press profile so that the printed gray has the same lightness as the screen value wherever black ink can reach it. From Slate 600 down it cannot: 100 % K on coated stock is about L* 17, so the dark grays print in even steps that are lighter than on screen but stay distinguishable from black. Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer simulates these values through the document profile, so they look right there too. The screen-match column is the print K value with a small cyan and magenta admixture, so the gray carries the blue cast of the screen value; hue matched with ArgyllCMS against Coated FOGRA39, K unchanged. Only for a CMYK document that is viewed on screen and must match the web colors, never for print.</p>')
 
     h.append('<h3>Red scale <span class="tag">BINDER Red and Red Dark are brand colors, not ramp '
              'steps</span></h3><div class="grid c5">')

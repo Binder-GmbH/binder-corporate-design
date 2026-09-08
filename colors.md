@@ -41,14 +41,14 @@ White and black carry no number. They sit outside the ramp, exactly as `$white` 
 |---|---|---|---|---|---|---|
 | **White** | — | `#ffffff` | 0/0/0/0 | 100.0 | — | 0/0/0/0 |
 | **Porcelain** | 100 | `#f4f4f5` | 0/0/0/5 | 96.2 | 3.8 | 1/1/0/5 |
-| **Pearl** | 200 | `#e6e6e9` | 0/0/0/10 | 91.4 | 4.8 | 3/2/0/11 |
-| **Silver** | 300 | `#d8d8dd` | 0/0/0/20 | 86.5 | 4.9 | 5/4/0/16 |
-| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 | 8/8/0/30 |
+| **Pearl** | 200 | `#e6e6e9` | 0/0/0/10 | 91.4 | 4.8 | 3/2/0/10 |
+| **Silver** | 300 | `#d8d8dd` | 0/0/0/20 | 86.5 | 4.9 | 5/4/0/20 |
+| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 | 8/7/0/30 |
 | **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 | 9/8/0/45 |
-| **Slate** | 600 | `#7a7a82` | 0/0/0/60 | 51.5 | 12.3 | 13/12/0/58 |
-| **Basalt** | 700 | `#5a5a5f` | 0/0/0/70 | 38.4 | 13.1 | 12/10/0/73 |
-| **Anthracite** | 800 | `#404043` | 0/0/0/80 | 27.2 | 11.2 | 11/9/0/84 |
-| **Graphite** | 900 | `#252527` | 0/0/0/90 | 14.8 | 12.4 | 12/9/0/93 |
+| **Slate** | 600 | `#7a7a82` | 0/0/0/60 | 51.5 | 12.3 | 14/12/0/60 |
+| **Basalt** | 700 | `#5a5a5f` | 0/0/0/70 | 38.4 | 13.1 | 11/10/0/70 |
+| **Anthracite** | 800 | `#404043` | 0/0/0/80 | 27.2 | 11.2 | 10/8/0/80 |
+| **Graphite** | 900 | `#252527` | 0/0/0/90 | 14.8 | 12.4 | 11/9/0/90 |
 | **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 | 0/0/0/100 |
 
 L\* is perceived lightness, 0 black to 100 white. Step is the distance to the
@@ -61,9 +61,9 @@ print in even steps that are lighter than on screen but stay distinguishable fro
 Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer
 simulates these values through the document profile, so they look right there too.
 
-The screen-match column is a maximum-K separation of the screen value, computed with
-ArgyllCMS against Coated FOGRA39 with black point compensation: black carries the tone, a
-few percent of cyan and magenta carry the cast. Only for a CMYK document that is viewed on screen and must match
+The screen-match column is the print K value with a small cyan and magenta admixture, so
+the gray carries the blue cast of the screen value; hue matched with ArgyllCMS against
+Coated FOGRA39, K unchanged. Only for a CMYK document that is viewed on screen and must match
 the web colors, never for print.
 
 The ramp is denser at the light end on purpose: pale surface tones get used over
