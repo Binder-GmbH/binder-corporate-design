@@ -140,7 +140,7 @@ def build_markdown():
            "`font-weight`.", "",
            "White and black carry no number. They sit outside the ramp, exactly as `$white` and",
            "`$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.", "",
-           "| Name | Scale | Hex | CMYK | L\\* | Step | CMYK, screen match |", "|---|---|---|---|---|---|---|"]
+           "| Name | Scale | Hex | CMYK | L\\* | Step | CMYK, screen match (not for print) |", "|---|---|---|---|---|---|---|"]
     prev = None
     for r in GRAYS:
         L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"; prev = L
@@ -236,6 +236,7 @@ footer a{color:var(--red)}
 .bar div{flex:1;position:relative;border-radius:2px 2px 0 0}
 .bar span,.bar em{position:absolute;left:0;right:0;text-align:center;font-size:10px;color:var(--g700);font-style:normal}
 .bar span{top:-17px}.bar em{bottom:-18px}
+.lstar .muted{color:var(--g500)}.lstar th.muted{font-weight:400;border-left:1px solid var(--g300)}.lstar td.muted{border-left:1px solid var(--g300)}
 .seqrow span{display:inline-block;width:16px;height:16px;margin-right:3px;vertical-align:-3px;border-radius:2px}
 @media(max-width:820px){.two{grid-template-columns:1fr}
  .c4,.c5,.c8{grid-template-columns:repeat(4,1fr)}.c11,.c12{grid-template-columns:repeat(6,1fr)}
@@ -297,13 +298,13 @@ def build_page():
              'more widely, because the eye separates dark tones less well anyway.</p>')
     h.append('<h3>The gray scale in detail</h3>'
              '<table class="lstar"><tr><th>Name</th><th>Scale</th><th>Hex</th><th>CMYK</th><th>L*</th>'
-             '<th>Δ</th><th>CMYK, screen match</th></tr>')
+             '<th>Δ</th><th class="muted">CMYK, screen match <span class="tag">not for print</span></th></tr>')
     prev = None
     for r in GRAYS:
         L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"
         h.append(f'<tr><td><strong>{r["name"]}</strong></td><td>{r["scale"] or "—"}</td>'
                  f'<td><code>{r["hex"]}</code></td><td>{r["cmyk"]}</td><td>{L:.1f}</td><td>{step}</td>'
-                 f'<td>{rgb_to_cmyk(r["hex"])}</td></tr>'); prev = L
+                 f'<td class="muted">{rgb_to_cmyk(r["hex"])}</td></tr>'); prev = L
     h.append('</table><p class="cap">The CMYK column is for anything that gets printed: pure K, because '
              'the few percent of cyan and magenta in the screen values cannot be reproduced reliably in '
              'offset printing. The screen-match column is the screen value converted to CMYK without a '
