@@ -70,63 +70,63 @@
       "scale": 100,
       "hex": "#f4f4f5",
       "cmyk": "0/0/0/5",
-      "cmykScreenMatch": "1/1/0/5"
+      "cmykScreenMatch": "1/1/0/4"
     },
     {
       "name": "Pearl",
       "scale": 200,
       "hex": "#e6e6e9",
       "cmyk": "0/0/0/10",
-      "cmykScreenMatch": "3/2/0/10"
+      "cmykScreenMatch": "3/2/0/7"
     },
     {
       "name": "Silver",
       "scale": 300,
       "hex": "#d8d8dd",
       "cmyk": "0/0/0/20",
-      "cmykScreenMatch": "5/4/0/20"
+      "cmykScreenMatch": "5/4/0/15"
     },
     {
       "name": "Ash",
       "scale": 400,
       "hex": "#b8b8c0",
       "cmyk": "0/0/0/30",
-      "cmykScreenMatch": "8/7/0/30"
+      "cmykScreenMatch": "8/7/0/23"
     },
     {
       "name": "Concrete",
       "scale": 500,
       "hex": "#9a9aa1",
       "cmyk": "0/0/0/45",
-      "cmykScreenMatch": "9/8/0/45"
+      "cmykScreenMatch": "8/7/0/39"
     },
     {
       "name": "Slate",
       "scale": 600,
       "hex": "#7a7a82",
       "cmyk": "0/0/0/60",
-      "cmykScreenMatch": "14/12/0/60"
+      "cmykScreenMatch": "12/11/0/53"
     },
     {
       "name": "Basalt",
       "scale": 700,
       "hex": "#5a5a5f",
       "cmyk": "0/0/0/70",
-      "cmykScreenMatch": "11/10/0/70"
+      "cmykScreenMatch": "10/9/0/66"
     },
     {
       "name": "Anthracite",
       "scale": 800,
       "hex": "#404043",
       "cmyk": "0/0/0/80",
-      "cmykScreenMatch": "10/8/0/80"
+      "cmykScreenMatch": "9/8/0/77"
     },
     {
       "name": "Graphite",
       "scale": 900,
       "hex": "#252527",
       "cmyk": "0/0/0/90",
-      "cmykScreenMatch": "11/9/0/90"
+      "cmykScreenMatch": "10/8/0/88"
     },
     {
       "name": "Black",
@@ -249,5 +249,5 @@
     "10": "ABDEGHIJKL",
     "11": "ABCDEGHIJKL"
   },
-  "screenMatchNote": "cmykScreenMatch: the print K value with a small cyan and magenta admixture so the printed gray carries the blue cast of the screen value. Hue matched with ArgyllCMS against Coated FOGRA39, K unchanged, yellow 0. For CMYK documents that are only viewed on screen. Not a print value."
+  "screenMatchNote": "cmykScreenMatch: the same gray with a slight blue cast. Target is the lightness of the pure-K print value and the hue of the screen value; ArgyllCMS finds the maximum-K mix under Coated FOGRA39 that hits it, so K drops a little to make room for the cyan and magenta. For discussion, not a print value."
 }
