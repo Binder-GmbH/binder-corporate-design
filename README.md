@@ -33,7 +33,10 @@ partners, suppliers and integrators**.
 ```
 
 The nine grays run **100 (lightest) to 900 (darkest)**, the same direction as
-CSS `font-weight`. White and black carry no number — they sit outside the ramp,
+CSS `font-weight`, and each has a name for talking to people: **Porcelain 100 ·
+Pearl 200 · Silver 300 · Ash 400 · Concrete 500 · Slate 600 · Basalt 700 ·
+Anthracite 800 · Graphite 900**. `--binder-anthracite` and `--binder-gray-800`
+are the same value. White and black carry no number — they sit outside the ramp,
 as `$white` and `$black` do in Bootstrap.
 
 ## Two things that trip people up
@@ -41,7 +44,9 @@ as `$white` and `$black` do in Bootstrap.
 **Hex is for screen, CMYK is for print — do not convert between them.** The
 grays carry a slight blue cast on screen but print as pure K. Converted
 exactly, the cast comes to under 6 % cyan, which offset printing cannot
-reproduce reliably.
+reproduce reliably. The one exception is a CMYK document that is only viewed on
+screen, such as a digital flyer: for that, take the screen-match values from the
+gray scale table in [colors.md](colors.md).
 
 **The corporate typeface is free.** Source Sans 3 is open source — get it from
 Google Fonts, Adobe Fonts or GitHub, no license to buy. It replaced FF Meta

@@ -36,6 +36,20 @@ def is_light(hexv):
     return lstar(hexv) > 55
 
 
+def gray_label(r):
+    """'Gray 100' for ramp steps, 'White'/'Black' outside the ramp."""
+    return f"Gray {r['scale']}" if r["scale"] else r["name"]
+
+
+def rgb_to_cmyk(hexv):
+    """Plain RGB to CMYK conversion, no color profile: shows the cast a screen value carries."""
+    h = hexv.lstrip("#"); r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    k = 1 - max(r, g, b)
+    if k >= 1: return "0/0/0/100"
+    c, m, y = ((1 - v - k) / (1 - k) for v in (r, g, b))
+    return "/".join(f"{round(v * 100):d}" for v in (c, m, y, k))
+
+
 def refs(v):
     return ", ".join(x for x in (v.get("hks"), v.get("pantone"), v.get("ral")) if x) or "—"
 
@@ -56,6 +70,8 @@ def build_css():
     for row in GRAYS:
         key = f"gray-{row['scale']}" if row["scale"] else slug(row["name"])
         o.append(f"  --binder-{key}: {row['hex']};")
+    o += ["", "  /* The same grays by name */"]
+    o += [f"  --binder-{slug(row['name'])}: var(--binder-gray-{row['scale']});" for row in GRAYS if row["scale"]]
     o += ["", "  /* Reds. BINDER Red and Red Dark are brand colors, not ramp steps. */"]
     for row in REDS:
         key = f"red-{row['scale']}" if row["scale"] else slug(row["name"]).removeprefix("binder-")
@@ -73,7 +89,8 @@ def build_scss():
          f"$white:      {GRAYS[0]['hex']};"]
     o += [f"$gray-{r['scale']}:   {r['hex']};"
           for r in GRAYS if r["scale"]]
-    o += [f"$black:      {GRAYS[-1]['hex']};", ""]
+    o += [f"$black:      {GRAYS[-1]['hex']};", "", "// The same grays by name"]
+    o += [f"${slug(r['name'])}:".ljust(14) + f"$gray-{r['scale']};" for r in GRAYS if r["scale"]]
     o += ["", "// Reds"]
     for row in REDS:
         name = f"$red-{row['scale']}:" if row["scale"] else f"${slug(row['name'])}:"
@@ -123,13 +140,18 @@ def build_markdown():
            "`font-weight`.", "",
            "White and black carry no number. They sit outside the ramp, exactly as `$white` and",
            "`$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.", "",
-           "| Color | Hex | CMYK | L\\* | Step |", "|---|---|---|---|---|"]
+           "| Name | Scale | Hex | CMYK | L\\* | Step | CMYK, screen match |", "|---|---|---|---|---|---|---|"]
     prev = None
     for r in GRAYS:
         L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"; prev = L
-        md.append(f"| {r['name']} | `{r['hex']}` | {r['cmyk']} | {L:.1f} | {step} |")
+        md.append(f"| **{r['name']}** | {r['scale'] or '—'} | `{r['hex']}` | {r['cmyk']} | {L:.1f} | {step} | {rgb_to_cmyk(r['hex'])} |")
     md += ["", "L\\* is perceived lightness, 0 black to 100 white. Step is the distance to the",
-           "previous gray."]
+           "previous gray.", "",
+           "The CMYK column is for anything that gets printed: pure K, because the few percent of",
+           "cyan and magenta in the screen values cannot be reproduced reliably in offset printing.",
+           "The screen-match column is the screen value converted to CMYK without a profile. Use it",
+           "only for a CMYK document that is viewed on screen and must match the web colors exactly,",
+           "such as a digital flyer or a PDF that is never printed."]
     md += ["", "The ramp is denser at the light end on purpose: pale surface tones get used over",
            "large areas, where small differences matter. The dark half steps more widely, because",
            "the eye separates dark tones less well anyway.", "",
@@ -214,7 +236,6 @@ footer a{color:var(--red)}
 .bar div{flex:1;position:relative;border-radius:2px 2px 0 0}
 .bar span,.bar em{position:absolute;left:0;right:0;text-align:center;font-size:10px;color:var(--g700);font-style:normal}
 .bar span{top:-17px}.bar em{bottom:-18px}
-table.lstar{max-width:560px}
 .seqrow span{display:inline-block;width:16px;height:16px;margin-right:3px;vertical-align:-3px;border-radius:2px}
 @media(max-width:820px){.two{grid-template-columns:1fr}
  .c4,.c5,.c8{grid-template-columns:repeat(4,1fr)}.c11,.c12{grid-template-columns:repeat(6,1fr)}
@@ -260,7 +281,7 @@ def build_page():
     h.append('<h3>Gray scale <span class="tag">100 lightest &middot; 900 darkest &middot; white '
              'and black sit outside the ramp</span></h3><div class="grid c11">')
     for r in GRAYS:
-        h.append(cell(r["name"], r["hex"], r["cmyk"], extra=f"<br>L* {lstar(r['hex']):.1f}"))
+        h.append(cell(r["name"], r["hex"], r["cmyk"], scale=r["scale"], extra=f"<br>L* {lstar(r['hex']):.1f}"))
     h.append('</div><p class="cap">The scale runs 100 (lightest) to 900 (darkest), the same '
              'direction as CSS font-weight.</p>')
 
@@ -274,14 +295,20 @@ def build_page():
     h.append('</div><p class="cap">The ramp is denser at the light end on purpose: pale surface '
              'tones get used over large areas, where small differences matter. The dark half steps '
              'more widely, because the eye separates dark tones less well anyway.</p>')
-    h.append('<table class="lstar"><tr><th>Gray</th><th>Hex</th><th>CMYK</th><th>L*</th>'
-             '<th>Step down from the previous</th></tr>')
+    h.append('<h3>The gray scale in detail</h3>'
+             '<table class="lstar"><tr><th>Name</th><th>Scale</th><th>Hex</th><th>CMYK</th><th>L*</th>'
+             '<th>Δ</th><th>CMYK, screen match</th></tr>')
     prev = None
     for r in GRAYS:
         L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"
-        h.append(f'<tr><td>{r["name"]}</td><td><code>{r["hex"]}</code></td><td>{r["cmyk"]}</td>'
-                 f'<td>{L:.1f}</td><td>{step}</td></tr>'); prev = L
-    h.append('</table>')
+        h.append(f'<tr><td><strong>{r["name"]}</strong></td><td>{r["scale"] or "—"}</td>'
+                 f'<td><code>{r["hex"]}</code></td><td>{r["cmyk"]}</td><td>{L:.1f}</td><td>{step}</td>'
+                 f'<td>{rgb_to_cmyk(r["hex"])}</td></tr>'); prev = L
+    h.append('</table><p class="cap">The CMYK column is for anything that gets printed: pure K, because '
+             'the few percent of cyan and magenta in the screen values cannot be reproduced reliably in '
+             'offset printing. The screen-match column is the screen value converted to CMYK without a '
+             'profile. Use it only for a CMYK document that is viewed on screen and must match the web '
+             'colors exactly, such as a digital flyer or a PDF that is never printed.</p>')
 
     h.append('<h3>Red scale <span class="tag">BINDER Red and Red Dark are brand colors, not ramp '
              'steps</span></h3><div class="grid c5">')
@@ -592,7 +619,7 @@ def main():
     build_css()
     build_scss()
     build_swatch([{**v, "label": LABELS[k]} for k, v in PRIMARY.items()], "assets/primary.svg")
-    build_swatch([{**r, "label": r["name"]} for r in GRAYS], "assets/scale-gray.svg", cell=100)
+    build_swatch([{**r, "label": f"{r['name']} {r['scale']}" if r["scale"] else r["name"]} for r in GRAYS], "assets/scale-gray.svg", cell=100)
     build_swatch([{**r, "label": r["name"]} for r in REDS], "assets/scale-red.svg")
     build_swatch(P["chart"], "assets/chart.svg", cell=76)
     build_markdown()

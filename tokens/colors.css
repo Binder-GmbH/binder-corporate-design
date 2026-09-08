@@ -16,6 +16,17 @@
   --binder-gray-900: #252527;
   --binder-black: #000000;
 
+  /* The same grays by name */
+  --binder-porcelain: var(--binder-gray-100);
+  --binder-pearl: var(--binder-gray-200);
+  --binder-silver: var(--binder-gray-300);
+  --binder-ash: var(--binder-gray-400);
+  --binder-concrete: var(--binder-gray-500);
+  --binder-slate: var(--binder-gray-600);
+  --binder-basalt: var(--binder-gray-700);
+  --binder-anthracite: var(--binder-gray-800);
+  --binder-graphite: var(--binder-gray-900);
+
   /* Reds. BINDER Red and Red Dark are brand colors, not ramp steps. */
   --binder-red-100: #ffcccc;
   --binder-red-200: #ff9999;
