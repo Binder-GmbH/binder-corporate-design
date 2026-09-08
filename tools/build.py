@@ -139,10 +139,12 @@ def build_markdown():
         md.append(f"| **{r['name']}** | {r['scale'] or '—'} | `{r['hex']}` | {r['cmyk']} | {L:.1f} | {step} |")
     md += ["", "L\\* is perceived lightness, 0 black to 100 white. Step is the distance to the",
            "previous gray.", "",
-           "The CMYK values are pure K, matched to the screen values by lightness. That works for",
-           "the light and middle grays. From Slate 600 down, pure K prints lighter than the screen",
-           "value, because 100 % K on coated stock only reaches about L\\* 20: in print, the dark",
-           "grays sit a step or two lighter than on screen. Do not compensate with rich black."]
+           "The CMYK values are pure K, chosen with the Coated FOGRA39 press profile so that the",
+           "printed gray has the same lightness as the screen value wherever black ink can reach it.",
+           "From Slate 600 down it cannot: 100 % K on coated stock is about L\\* 17, so the dark grays",
+           "print in even steps that are lighter than on screen but stay distinguishable from black.",
+           "Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer",
+           "simulates these values through the document profile, so they look right there too."]
     md += ["", "The ramp is denser at the light end on purpose: pale surface tones get used over",
            "large areas, where small differences matter. The dark half steps more widely, because",
            "the eye separates dark tones less well anyway.", "",
@@ -295,10 +297,7 @@ def build_page():
         h.append(f'<tr><td><strong>{r["name"]}</strong></td><td>{r["scale"] or "—"}</td>'
                  f'<td><code>{r["hex"]}</code></td><td>{r["cmyk"]}</td><td>{L:.1f}</td><td>{step}</td>'
                  f'</tr>'); prev = L
-    h.append('</table><p class="cap">The CMYK values are pure K, matched to the screen values by lightness. '
-             'That works for the light and middle grays. From Slate 600 down, pure K prints lighter than the '
-             'screen value, because 100 % K on coated stock only reaches about L* 20: in print, the dark grays '
-             'sit a step or two lighter than on screen. Do not compensate with rich black.</p>')
+    h.append('</table><p class="cap">The CMYK values are pure K, chosen with the Coated FOGRA39 press profile so that the printed gray has the same lightness as the screen value wherever black ink can reach it. From Slate 600 down it cannot: 100 % K on coated stock is about L* 17, so the dark grays print in even steps that are lighter than on screen but stay distinguishable from black. Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer simulates these values through the document profile, so they look right there too.</p>')
 
     h.append('<h3>Red scale <span class="tag">BINDER Red and Red Dark are brand colors, not ramp '
              'steps</span></h3><div class="grid c5">')
