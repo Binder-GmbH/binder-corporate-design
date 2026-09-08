@@ -3,52 +3,239 @@
   "version": "2026",
   "scaleNote": "Nine grays numbered 100 (lightest) to 900 (darkest), the same direction as CSS font-weight. White and Black carry no number: they sit outside the ramp, as $white and $black do in Bootstrap and Tailwind.",
   "primary": {
-    "white":      { "hex": "#ffffff", "cmyk": "0/0/0/0",       "ral": "RAL 9003 Signal White", "use": "Structure, backgrounds, white space, negative applications" },
-    "porcelain":  { "hex": "#f4f4f5", "cmyk": "0/0/0/10", "scale": 100, "use": "Sections, cards, subtle backgrounds" },
-    "silver":     { "hex": "#d8d8dd", "cmyk": "0/0/0/25", "scale": 300, "use": "Borders, secondary elements" },
-    "concrete":   { "hex": "#9a9aa1", "cmyk": "0/0/0/45", "scale": 500, "use": "Muted text, dividers, secondary UI elements" },
-    "anthracite": { "hex": "#404043", "cmyk": "0/0/0/75", "scale": 800, "use": "Text and important UI elements — the dark tone that is not black" },
-    "black":      { "hex": "#000000", "cmyk": "0/0/0/100", "hks": "HKS 88", "pantone": "Pantone 426", "ral": "RAL 9005 Jet Black", "use": "Primary text colour, base for graphics and icons — avoid large full-coverage areas" },
-    "binderRed":  { "hex": "#e60000", "cmyk": "0/100/100/0", "hks": "HKS 14", "pantone": "Pantone 485", "ral": "RAL 3020 Traffic Red", "use": "Highlight colour, graphic elements, icons, emphasis" },
-    "redDark":    { "hex": "#990000", "cmyk": "24/100/100/27", "hks": "HKS 16", "ral": "RAL 3003 Ruby Red", "use": "Accent alongside BINDER Red, contrast, mouseover state of red buttons" }
+    "white": {
+      "hex": "#ffffff",
+      "cmyk": "0/0/0/0",
+      "ral": "RAL 9003 Signal White",
+      "use": "Structure, backgrounds, white space, negative applications"
+    },
+    "gray100": {
+      "hex": "#f4f4f5",
+      "cmyk": "0/0/0/10",
+      "scale": 100,
+      "use": "Sections, cards, subtle backgrounds"
+    },
+    "gray300": {
+      "hex": "#d8d8dd",
+      "cmyk": "0/0/0/25",
+      "scale": 300,
+      "use": "Borders, secondary elements"
+    },
+    "gray500": {
+      "hex": "#9a9aa1",
+      "cmyk": "0/0/0/45",
+      "scale": 500,
+      "use": "Muted text, dividers, secondary UI elements"
+    },
+    "gray800": {
+      "hex": "#404043",
+      "cmyk": "0/0/0/75",
+      "scale": 800,
+      "use": "Text and important UI elements — the dark tone that is not black"
+    },
+    "black": {
+      "hex": "#000000",
+      "cmyk": "0/0/0/100",
+      "hks": "HKS 88",
+      "pantone": "Pantone 426",
+      "ral": "RAL 9005 Jet Black",
+      "use": "Primary text colour, base for graphics and icons — avoid large full-coverage areas"
+    },
+    "binderRed": {
+      "hex": "#e60000",
+      "cmyk": "0/100/100/0",
+      "hks": "HKS 14",
+      "pantone": "Pantone 485",
+      "ral": "RAL 3020 Traffic Red",
+      "use": "Highlight colour, graphic elements, icons, emphasis"
+    },
+    "redDark": {
+      "hex": "#990000",
+      "cmyk": "24/100/100/27",
+      "hks": "HKS 16",
+      "ral": "RAL 3003 Ruby Red",
+      "use": "Accent alongside BINDER Red, contrast, mouseover state of red buttons"
+    }
   },
   "grayScale": [
-    { "name": "White",      "scale": null, "hex": "#ffffff", "cmyk": "0/0/0/0" },
-    { "name": "Porcelain",  "scale": 100,  "hex": "#f4f4f5", "cmyk": "0/0/0/10" },
-    { "name": "Pearl",      "scale": 200,  "hex": "#e6e6e9", "cmyk": "0/0/0/15" },
-    { "name": "Silver",     "scale": 300,  "hex": "#d8d8dd", "cmyk": "0/0/0/25" },
-    { "name": "Ash",        "scale": 400,  "hex": "#b8b8c0", "cmyk": "0/0/0/30" },
-    { "name": "Concrete",   "scale": 500,  "hex": "#9a9aa1", "cmyk": "0/0/0/45" },
-    { "name": "Slate",      "scale": 600,  "hex": "#7a7a82", "cmyk": "0/0/0/50" },
-    { "name": "Basalt",     "scale": 700,  "hex": "#5a5a5f", "cmyk": "0/0/0/65" },
-    { "name": "Anthracite", "scale": 800,  "hex": "#404043", "cmyk": "0/0/0/75" },
-    { "name": "Graphite",   "scale": 900,  "hex": "#252527", "cmyk": "0/0/0/85" },
-    { "name": "Black",      "scale": null, "hex": "#000000", "cmyk": "0/0/0/100" }
+    {
+      "name": "White",
+      "scale": null,
+      "hex": "#ffffff",
+      "cmyk": "0/0/0/0"
+    },
+    {
+      "name": "Gray 100",
+      "scale": 100,
+      "hex": "#f4f4f5",
+      "cmyk": "0/0/0/10"
+    },
+    {
+      "name": "Gray 200",
+      "scale": 200,
+      "hex": "#e6e6e9",
+      "cmyk": "0/0/0/15"
+    },
+    {
+      "name": "Gray 300",
+      "scale": 300,
+      "hex": "#d8d8dd",
+      "cmyk": "0/0/0/25"
+    },
+    {
+      "name": "Gray 400",
+      "scale": 400,
+      "hex": "#b8b8c0",
+      "cmyk": "0/0/0/30"
+    },
+    {
+      "name": "Gray 500",
+      "scale": 500,
+      "hex": "#9a9aa1",
+      "cmyk": "0/0/0/45"
+    },
+    {
+      "name": "Gray 600",
+      "scale": 600,
+      "hex": "#7a7a82",
+      "cmyk": "0/0/0/50"
+    },
+    {
+      "name": "Gray 700",
+      "scale": 700,
+      "hex": "#5a5a5f",
+      "cmyk": "0/0/0/65"
+    },
+    {
+      "name": "Gray 800",
+      "scale": 800,
+      "hex": "#404043",
+      "cmyk": "0/0/0/75"
+    },
+    {
+      "name": "Gray 900",
+      "scale": 900,
+      "hex": "#252527",
+      "cmyk": "0/0/0/85"
+    },
+    {
+      "name": "Black",
+      "scale": null,
+      "hex": "#000000",
+      "cmyk": "0/0/0/100"
+    }
   ],
   "redScale": [
-    { "name": "Blush",      "scale": 100,  "hex": "#ffcccc", "cmyk": "0/20/20/0" },
-    { "name": "Salmon",     "scale": 200,  "hex": "#ff9999", "cmyk": "0/40/40/0" },
-    { "name": "Coral",      "scale": 300,  "hex": "#e95e40", "cmyk": "0/75/75/0" },
-    { "name": "BINDER Red", "scale": null, "hex": "#e60000", "cmyk": "0/100/100/0" },
-    { "name": "Red Dark",   "scale": null, "hex": "#990000", "cmyk": "24/100/100/27" }
+    {
+      "name": "Red 100",
+      "scale": 100,
+      "hex": "#ffcccc",
+      "cmyk": "0/20/20/0"
+    },
+    {
+      "name": "Red 200",
+      "scale": 200,
+      "hex": "#ff9999",
+      "cmyk": "0/40/40/0"
+    },
+    {
+      "name": "Red 300",
+      "scale": 300,
+      "hex": "#e95e40",
+      "cmyk": "0/75/75/0"
+    },
+    {
+      "name": "BINDER Red",
+      "scale": null,
+      "hex": "#e60000",
+      "cmyk": "0/100/100/0"
+    },
+    {
+      "name": "Red Dark",
+      "scale": null,
+      "hex": "#990000",
+      "cmyk": "24/100/100/27"
+    }
   ],
-  "green": { "name": "BINDER Green", "hex": "#97bf29", "cmyk": "75/0/100/0", "use": "Sustainability and eco topics (BINDER goes green)" },
+  "green": {
+    "name": "BINDER Green",
+    "hex": "#97bf29",
+    "cmyk": "75/0/100/0",
+    "use": "Sustainability and eco topics (BINDER goes green)"
+  },
   "chart": [
-    { "key": "A", "hex": "#fde800", "cmyk": "5/0/100/0" },
-    { "key": "B", "hex": "#fabb00", "cmyk": "0/30/100/0" },
-    { "key": "C", "hex": "#e95d0f", "cmyk": "0/75/100/0" },
-    { "key": "D", "hex": "#e60000", "cmyk": "0/100/100/0" },
-    { "key": "E", "hex": "#c3077f", "cmyk": "22/97/0/0" },
-    { "key": "F", "hex": "#622181", "cmyk": "75/100/0/0" },
-    { "key": "G", "hex": "#38378b", "cmyk": "90/90/0/0" },
-    { "key": "H", "hex": "#006fb4", "cmyk": "90/50/0/0" },
-    { "key": "I", "hex": "#0099bf", "cmyk": "80/20/15/0" },
-    { "key": "J", "hex": "#26965e", "cmyk": "80/15/75/0" },
-    { "key": "K", "hex": "#97bf29", "cmyk": "50/0/95/0" },
-    { "key": "L", "hex": "#bdcd00", "cmyk": "35/0/100/0" }
+    {
+      "key": "A",
+      "hex": "#fde800",
+      "cmyk": "5/0/100/0"
+    },
+    {
+      "key": "B",
+      "hex": "#fabb00",
+      "cmyk": "0/30/100/0"
+    },
+    {
+      "key": "C",
+      "hex": "#e95d0f",
+      "cmyk": "0/75/100/0"
+    },
+    {
+      "key": "D",
+      "hex": "#e60000",
+      "cmyk": "0/100/100/0"
+    },
+    {
+      "key": "E",
+      "hex": "#c3077f",
+      "cmyk": "22/97/0/0"
+    },
+    {
+      "key": "F",
+      "hex": "#622181",
+      "cmyk": "75/100/0/0"
+    },
+    {
+      "key": "G",
+      "hex": "#38378b",
+      "cmyk": "90/90/0/0"
+    },
+    {
+      "key": "H",
+      "hex": "#006fb4",
+      "cmyk": "90/50/0/0"
+    },
+    {
+      "key": "I",
+      "hex": "#0099bf",
+      "cmyk": "80/20/15/0"
+    },
+    {
+      "key": "J",
+      "hex": "#26965e",
+      "cmyk": "80/15/75/0"
+    },
+    {
+      "key": "K",
+      "hex": "#97bf29",
+      "cmyk": "50/0/95/0"
+    },
+    {
+      "key": "L",
+      "hex": "#bdcd00",
+      "cmyk": "35/0/100/0"
+    }
   ],
   "chartSequences": {
-    "1": "A", "2": "AD", "3": "ADH", "4": "ADHK", "5": "ADGJL", "6": "ACEGIK",
-    "7": "ACEGIJL", "8": "ABDFHIKL", "9": "ABDEGHIKL", "10": "ABDEGHIJKL", "11": "ABCDEGHIJKL"
+    "1": "A",
+    "2": "AD",
+    "3": "ADH",
+    "4": "ADHK",
+    "5": "ADGJL",
+    "6": "ACEGIK",
+    "7": "ACEGIJL",
+    "8": "ABDFHIKL",
+    "9": "ABDEGHIKL",
+    "10": "ABDEGHIJKL",
+    "11": "ABCDEGHIJKL"
   }
 }

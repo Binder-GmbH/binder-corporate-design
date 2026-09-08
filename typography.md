@@ -9,10 +9,6 @@ licence to buy. Get it from [Google Fonts](https://fonts.google.com/specimen/Sou
 It replaces the previous corporate typeface FF Meta Pro, which was licensed per
 weight. Everyone producing BINDER material now has the correct font at no cost.
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300..600&display=swap" rel="stylesheet">
-```
-
 ```css
 font-family: "Source Sans 3", Arial, sans-serif;
 ```

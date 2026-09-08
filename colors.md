@@ -16,41 +16,40 @@ printing. Use hex on screen and CMYK on paper.
 
 ![Primary colours](assets/primary.svg)
 
-| Colour | Scale | Hex | CMYK | Print references | Use |
-|---|---|---|---|---|---|
-| **White** | - | `#ffffff` | 0/0/0/0 | RAL 9003 Signal White | Structure, backgrounds, white space, negative applications |
-| **Porcelain** | 100 | `#f4f4f5` | 0/0/0/10 | — | Sections, cards, subtle backgrounds |
-| **Silver** | 300 | `#d8d8dd` | 0/0/0/25 | — | Borders, secondary elements |
-| **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | — | Muted text, dividers, secondary UI elements |
-| **Anthracite** | 800 | `#404043` | 0/0/0/75 | — | Text and important UI elements — the dark tone that is not black |
-| **Black** | - | `#000000` | 0/0/0/100 | HKS 88, Pantone 426, RAL 9005 Jet Black | Primary text colour, base for graphics and icons — avoid large full-coverage areas |
-| **BINDER Red** | - | `#e60000` | 0/100/100/0 | HKS 14, Pantone 485, RAL 3020 Traffic Red | Highlight colour, graphic elements, icons, emphasis |
-| **Red Dark** | - | `#990000` | 24/100/100/27 | HKS 16, RAL 3003 Ruby Red | Accent alongside BINDER Red, contrast, mouseover state of red buttons |
+| Colour | Hex | CMYK | Print references | Use |
+|---|---|---|---|---|
+| **White** | `#ffffff` | 0/0/0/0 | RAL 9003 Signal White | Structure, backgrounds, white space, negative applications |
+| **Gray 100** | `#f4f4f5` | 0/0/0/10 | — | Sections, cards, subtle backgrounds |
+| **Gray 300** | `#d8d8dd` | 0/0/0/25 | — | Borders, secondary elements |
+| **Gray 500** | `#9a9aa1` | 0/0/0/45 | — | Muted text, dividers, secondary UI elements |
+| **Gray 800** | `#404043` | 0/0/0/75 | — | Text and important UI elements — the dark tone that is not black |
+| **Black** | `#000000` | 0/0/0/100 | HKS 88, Pantone 426, RAL 9005 Jet Black | Primary text colour, base for graphics and icons — avoid large full-coverage areas |
+| **BINDER Red** | `#e60000` | 0/100/100/0 | HKS 14, Pantone 485, RAL 3020 Traffic Red | Highlight colour, graphic elements, icons, emphasis |
+| **Red Dark** | `#990000` | 24/100/100/27 | HKS 16, RAL 3003 Ruby Red | Accent alongside BINDER Red, contrast, mouseover state of red buttons |
 
 ## The gray scale
 
 ![Gray scale](assets/scale-gray.svg)
 
-Each gray has a **name** for talking to people and a **number** for code - they point at
-the same value. The scale runs 100 (lightest) to 900 (darkest), the same direction as
-CSS `font-weight`.
+The scale runs 100 (lightest) to 900 (darkest), the same direction as CSS
+`font-weight`.
 
 White and black carry no number. They sit outside the ramp, exactly as `$white` and
 `$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.
 
-| Name | Scale | Hex | CMYK |
-|---|---|---|---|
-| White | - | `#ffffff` | 0/0/0/0 |
-| Porcelain | 100 | `#f4f4f5` | 0/0/0/10 |
-| Pearl | 200 | `#e6e6e9` | 0/0/0/15 |
-| Silver | 300 | `#d8d8dd` | 0/0/0/25 |
-| Ash | 400 | `#b8b8c0` | 0/0/0/30 |
-| Concrete | 500 | `#9a9aa1` | 0/0/0/45 |
-| Slate | 600 | `#7a7a82` | 0/0/0/50 |
-| Basalt | 700 | `#5a5a5f` | 0/0/0/65 |
-| Anthracite | 800 | `#404043` | 0/0/0/75 |
-| Graphite | 900 | `#252527` | 0/0/0/85 |
-| Black | - | `#000000` | 0/0/0/100 |
+| Colour | Hex | CMYK |
+|---|---|---|
+| White | `#ffffff` | 0/0/0/0 |
+| Gray 100 | `#f4f4f5` | 0/0/0/10 |
+| Gray 200 | `#e6e6e9` | 0/0/0/15 |
+| Gray 300 | `#d8d8dd` | 0/0/0/25 |
+| Gray 400 | `#b8b8c0` | 0/0/0/30 |
+| Gray 500 | `#9a9aa1` | 0/0/0/45 |
+| Gray 600 | `#7a7a82` | 0/0/0/50 |
+| Gray 700 | `#5a5a5f` | 0/0/0/65 |
+| Gray 800 | `#404043` | 0/0/0/75 |
+| Gray 900 | `#252527` | 0/0/0/85 |
+| Black | `#000000` | 0/0/0/100 |
 
 The ramp is denser at the light end on purpose: pale surface tones get used over
 large areas, where small differences matter. The dark half steps more widely, because
@@ -60,13 +59,13 @@ the eye separates dark tones less well anyway.
 
 ![Red scale](assets/scale-red.svg)
 
-| Name | Scale | Hex | CMYK |
-|---|---|---|---|
-| Blush | 100 | `#ffcccc` | 0/20/20/0 |
-| Salmon | 200 | `#ff9999` | 0/40/40/0 |
-| Coral | 300 | `#e95e40` | 0/75/75/0 |
-| BINDER Red | - | `#e60000` | 0/100/100/0 |
-| Red Dark | - | `#990000` | 24/100/100/27 |
+| Colour | Hex | CMYK |
+|---|---|---|
+| Red 100 | `#ffcccc` | 0/20/20/0 |
+| Red 200 | `#ff9999` | 0/40/40/0 |
+| Red 300 | `#e95e40` | 0/75/75/0 |
+| BINDER Red | `#e60000` | 0/100/100/0 |
+| Red Dark | `#990000` | 24/100/100/27 |
 
 BINDER Red and Red Dark carry no number - they are brand colours, not ramp steps.
 
