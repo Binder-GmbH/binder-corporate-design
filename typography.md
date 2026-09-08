@@ -49,16 +49,23 @@ subline Light 18 / 22 pt. Everything else unchanged.
   in tables.
 - Lists: bullet marker, 3.5 mm to the text, wrapped lines indent to the first.
 
+## Source Serif 4
+
+The serif companion, for emotional text such as quotations. Same origin as
+Source Sans 3, also open source and free:
+[Google Fonts](https://fonts.google.com/specimen/Source+Serif+4),
+[Adobe Fonts](https://fonts.adobe.com/fonts/source-serif),
+[GitHub](https://github.com/adobe-fonts/source-serif).
+
+> The manual names Source Sans 3 at this point, which is a sans-serif and
+> cannot be the serif face it describes in the same sentence — a leftover from
+> replacing the previous typeface throughout the document. Source Serif 4 is
+> the counterpart to Source Sans 3 and is used here on that basis; confirmation
+> from marketing is pending.
+
 ## Substitutes
 
 | Instead of | Use | When |
 |---|---|---|
 | Source Sans 3 | **Arial Unicode MS** | Office and Word templates; covers Chinese characters |
-| The serif companion | **Georgia** | Quotations in substitute settings |
-
-## Open question
-
-The manual describes a serif face for quotations but names Source Sans 3 for
-it — which is a sans-serif. Same for the note on very large sizes. These look
-like leftovers from replacing the old typeface throughout the document. Ask
-marketing if you need a serif face.
+| Source Serif 4 | **Georgia** | Quotations in substitute settings |

@@ -199,7 +199,7 @@ def build_page():
          '<title>BINDER Corporate Design</title>',
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
          '<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300..600'
-         '&display=swap" rel="stylesheet">',
+         '&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap" rel="stylesheet">',
          f'<style>{PAGE_CSS}</style></head><body><div class="wrap">',
          '<header><div class="rule"></div><h1>BINDER Corporate Design</h1>',
          '<p>Colours, typography and logo rules for anyone producing material in the BINDER '
@@ -273,11 +273,16 @@ Source+Sans+3:wght@300..600&amp;display=swap" rel="stylesheet"&gt;
 font-family: "Source Sans 3", Arial, sans-serif;</code></pre>
 <p style="font-size:14px;color:#737373">Weights in use: Light 300, Regular 400, Medium 500,
 SemiBold 600.</p>
+<h3>Source Serif 4 <span class="tag">for quotations and emotional text</span></h3>
+<p style="font-size:14px">The serif companion. Same origin as Source Sans 3, also open source and
+free: <a href="https://fonts.google.com/specimen/Source+Serif+4">Google Fonts</a>,
+<a href="https://fonts.adobe.com/fonts/source-serif">Adobe Fonts</a>,
+<a href="https://github.com/adobe-fonts/source-serif">GitHub</a>.</p>
 <h3>Substitutes</h3>
 <table><tr><th>Instead of</th><th>Use</th><th>When</th></tr>
 <tr><td>Source Sans 3</td><td><strong>Arial Unicode MS</strong></td><td>Office applications and Word
 templates; also covers Chinese characters</td></tr>
-<tr><td>The serif companion</td><td><strong>Georgia</strong></td><td>Quotations in substitute
+<tr><td>Source Serif 4</td><td><strong>Georgia</strong></td><td>Quotations in substitute
 settings</td></tr></table>
 <h3>Rules</h3><ul class="rules">
 <li>Primary text colour is <strong>100&nbsp;% black</strong>. BINDER Red for emphasis, grays to
@@ -311,7 +316,15 @@ level three, set in caps</div>
 before you set it: every topic needs exactly one clearly most important headline, and levels may be
 skipped where they are not needed.</div>
 <div style="font-size:11px;font-weight:300;color:#737373">Captions are set only where they add
-something the image does not already say.</div></div></section>"""
+something the image does not already say.</div>
+<div style="font-family:'Source Serif 4',Georgia,serif;font-size:19px;font-style:italic;
+line-height:1.45;color:#000;border-left:3px solid #e60000;padding-left:16px;margin-top:22px">
+&ldquo;Emotional text such as quotations is set in Source Serif 4.&rdquo;</div></div>
+<div class="note"><strong>On the serif face.</strong> The manual names Source Sans 3 at this point,
+which is a sans-serif and cannot be the serif face it describes in the same sentence — a leftover
+from replacing the previous typeface throughout the document. Source Serif 4 is the counterpart to
+Source Sans 3 and is used here on that basis; confirmation from marketing is pending.</div>
+</section>"""
 
 
 LOGO_SECTION = f"""<section><h2>The red line above titles</h2>
