@@ -28,14 +28,14 @@ light coloring, quotation layers.
 ## The red line above titles
 
 A short red line sits directly above main titles. All measurements derive from
-the font size, so the rule holds at any scale.
+X, the cap height of the title (baseline to the top of a capital letter), so the
+rule holds at any scale.
 
 | Property | Rule |
 |---|---|
 | Color | BINDER Red |
 | Placement | Directly above the title, always flush left |
-| Thickness | **0.10 ×** font size |
+| Thickness | **0.1 × X** |
 | Length | Width of the **first three letters** of the title |
-| Distance to title | **0.3 ×** font size |
+| Distance to title | **0.3 × X** |
 
-At 50 pt type: thickness 5 pt, distance 16.6 pt.

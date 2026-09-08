@@ -484,35 +484,36 @@ LOGO_TABLE = build_logo_table()
 
 LOGO_SECTION = f"""<section><h2>The red line above titles</h2>
 <p class="lead">A short horizontal red line sits directly above main titles. All three measurements
-derive from the font size, so the rule holds at any scale.</p>
+derive from X, the cap height of the title, so the rule holds at any scale.</p>
 <div class="two"><div><table><tr><th>Property</th><th>Rule</th></tr>
 <tr><td>Color</td><td>BINDER Red</td></tr>
 <tr><td>Placement</td><td>Directly above the title, always flush left</td></tr>
-<tr><td>Thickness</td><td><strong>0.10 ×</strong> font size</td></tr>
+<tr><td>Thickness</td><td><strong>0.1 × X</strong></td></tr>
 <tr><td>Length</td><td>Width of the <strong>first three letters</strong> of the title</td></tr>
-<tr><td>Distance to title</td><td><strong>0.3 ×</strong> font size</td></tr></table>
-<p style="font-size:14px;color:{G[700]}">At 50 pt type: thickness 5 pt, distance 16.6 pt.</p></div>
+<tr><td>Distance to title</td><td><strong>0.3 × X</strong></td></tr>
+<tr><td>X</td><td>The cap height of the title: baseline to the top of a capital letter</td></tr></table>
+</div>
 <div><svg viewBox="0 0 380 150" width="100%" style="border:1px solid {G[300]};background:#fff"
 role="img" aria-label="Diagram of the red line rule">
 <g font-family="'Source Sans 3',Helvetica,Arial,sans-serif" font-size="10" fill="{G[700]}">
-<!-- drawn to scale for X = 42 px: bar 4.2 px thick, 12.6 px above the cap height, as wide as "Inc" -->
+<!-- drawn to scale: X = cap height 27 px at 42 px type; bar 2.7 px thick, 8.1 px above the caps, as wide as "Inc" -->
 <text x="60" y="112" font-size="42" font-weight="600" fill="{BLACK}">Incubator</text>
-<rect x="60" y="68.2" width="55" height="4.2" fill="{RED}"/>
-<line x1="60" y1="54.2" x2="115" y2="54.2" stroke="{G[500]}"/>
-<line x1="60" y1="50.2" x2="60" y2="58.2" stroke="{G[500]}"/>
-<line x1="115" y1="50.2" x2="115" y2="58.2" stroke="{G[500]}"/>
-<text x="87.5" y="48.2" text-anchor="middle">first 3 letters</text>
-<line x1="127" y1="68.2" x2="145" y2="68.2" stroke="{G[500]}"/>
-<line x1="127" y1="72.4" x2="145" y2="72.4" stroke="{G[500]}"/>
-<text x="151" y="73.4">0.10 X</text>
-<line x1="48" y1="72.4" x2="48" y2="85" stroke="{G[500]}"/>
-<line x1="44" y1="72.4" x2="52" y2="72.4" stroke="{G[500]}"/>
+<rect x="60" y="74.2" width="55" height="2.7" fill="{RED}"/>
+<line x1="60" y1="60.2" x2="115" y2="60.2" stroke="{G[500]}"/>
+<line x1="60" y1="56.2" x2="60" y2="64.2" stroke="{G[500]}"/>
+<line x1="115" y1="56.2" x2="115" y2="64.2" stroke="{G[500]}"/>
+<text x="87.5" y="54.2" text-anchor="middle">first 3 letters</text>
+<line x1="127" y1="74.2" x2="145" y2="74.2" stroke="{G[500]}"/>
+<line x1="127" y1="76.9" x2="145" y2="76.9" stroke="{G[500]}"/>
+<text x="151" y="77.9">0.1 X</text>
+<line x1="48" y1="76.9" x2="48" y2="85" stroke="{G[500]}"/>
+<line x1="44" y1="76.9" x2="52" y2="76.9" stroke="{G[500]}"/>
 <line x1="44" y1="85" x2="52" y2="85" stroke="{G[500]}"/>
-<text x="40" y="82.7" text-anchor="end">0.3 X</text>
-<line x1="250" y1="70" x2="250" y2="112" stroke="{G[500]}"/>
-<line x1="246" y1="70" x2="254" y2="70" stroke="{G[500]}"/>
+<text x="40" y="84.95" text-anchor="end">0.3 X</text>
+<line x1="250" y1="85" x2="250" y2="112" stroke="{G[500]}"/>
+<line x1="246" y1="85" x2="254" y2="85" stroke="{G[500]}"/>
 <line x1="246" y1="112" x2="254" y2="112" stroke="{G[500]}"/>
-<text x="260" y="95.0">X = font size</text>
+<text x="260" y="102.5">X = cap height</text>
 </g></svg></div></div>
 <h2 style="margin-top:44px">Logo</h2>
 <p class="lead">Download the files from the repository — SVG for screen, PNG for quick placement,
