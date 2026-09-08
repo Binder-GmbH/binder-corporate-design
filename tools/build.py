@@ -162,8 +162,9 @@ h3{font-size:16px;margin:34px 0 10px;font-weight:600}
 .lead{color:var(--g65);margin:0 0 26px;max-width:70ch}
 .grid{display:grid;gap:2px;background:var(--g25);border:1px solid var(--g25)}
 .c4{grid-template-columns:repeat(4,1fr)}.c3{grid-template-columns:repeat(3,1fr)}
+.c12 .sw{height:96px}.c12 .sw .cd{font-size:8.5px}
 .c12{grid-template-columns:repeat(12,1fr)}
-.sw{aspect-ratio:1;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+.sw{height:132px;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
  color:#fff;cursor:pointer;font:inherit;padding:8px;text-align:center;position:relative;transition:transform .18s ease}
 .sw.light{color:var(--k)}
 .sw:hover{transform:scale(1.06);z-index:5;box-shadow:0 6px 22px rgba(0,0,0,.28)}
@@ -185,6 +186,7 @@ footer{padding:34px 44px 50px;border-top:1px solid var(--g25);font-size:13px;col
 footer a{color:var(--red)}
 .seqrow span{display:inline-block;width:16px;height:16px;margin-right:3px;vertical-align:-3px;border-radius:2px}
 @media(max-width:820px){.two{grid-template-columns:1fr}.c4,.c3{grid-template-columns:repeat(2,1fr)}
+ .sw{height:110px}
  .c12{grid-template-columns:repeat(6,1fr)}section{padding:30px 22px}header{padding:38px 22px 30px}h1{font-size:29px}}
 """
 
@@ -221,7 +223,7 @@ def build_page():
              'weaken the triad</span></h3><div class="grid c3">')
     for r in P["redShades"]:
         h.append(cell("", r["hex"], r["cmyk"]))
-    h.append('</div><div class="grid c4" style="margin-top:2px">')
+    h.append('</div><div class="grid c4" style="margin-top:14px">')
     for r in P["blackShades"]:
         h.append(cell("", r["hex"], r["cmyk"]))
     h.append('</div>')
@@ -229,7 +231,8 @@ def build_page():
              '<div class="grid c4">')
     h.append(cell("BINDER Green", P["green"]["hex"], P["green"]["cmyk"]))
     h.append('<div style="grid-column:span 3;background:#fff;padding:22px;color:#737373;'
-             'font-size:14px;display:flex;align-items:center">BINDER goes green.</div></div>')
+             'font-size:14px;display:flex;align-items:center">For sustainability and eco topics '
+             '(BINDER goes green). Not a general-purpose accent.</div></div>')
     h.append('<h3>Chart colours</h3><div class="grid c12">')
     for c in P["chart"]:
         h.append(cell(c["key"], c["hex"], c["cmyk"]))
