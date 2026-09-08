@@ -49,7 +49,7 @@ White and black carry no number. They sit outside the ramp, exactly as `$white` 
 | **Basalt** | 700 | `#5a5a5f` | 0/0/0/70 | 38.4 | 13.1 | 12/10/0/73 |
 | **Anthracite** | 800 | `#404043` | 0/0/0/80 | 27.2 | 11.2 | 11/9/0/84 |
 | **Graphite** | 900 | `#252527` | 0/0/0/90 | 14.8 | 12.4 | 12/9/0/93 |
-| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 | 31/24/22/98 |
+| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 | 0/0/0/100 |
 
 L\* is perceived lightness, 0 black to 100 white. Step is the distance to the
 previous gray.

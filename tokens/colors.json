@@ -133,7 +133,7 @@
       "scale": null,
       "hex": "#000000",
       "cmyk": "0/0/0/100",
-      "cmykScreenMatch": "31/24/22/98"
+      "cmykScreenMatch": "0/0/0/100"
     }
   ],
   "redScale": [
@@ -249,5 +249,5 @@
     "10": "ABDEGHIJKL",
     "11": "ABCDEGHIJKL"
   },
-  "screenMatchNote": "cmykScreenMatch: computed with ArgyllCMS xicclu against Coated FOGRA39, relative colorimetric, maximum-K black generation, screen black mapped to the darkest max-K tone (black point compensation). Black carries the tone, a few percent of cyan and magenta carry the cast. For CMYK documents that are only viewed on screen. Not a print value."
+  "screenMatchNote": "cmykScreenMatch: computed with ArgyllCMS xicclu against Coated FOGRA39, relative colorimetric, maximum-K black generation, screen black mapped to the darkest max-K tone (black point compensation). Black carries the tone, a few percent of cyan and magenta carry the cast. For CMYK documents that are only viewed on screen. Not a print value. Black stays 0/0/0/100: no rich black."
 }
