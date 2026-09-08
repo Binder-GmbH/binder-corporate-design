@@ -199,6 +199,7 @@ table{border-collapse:collapse;width:100%;font-size:14px;margin:14px 0}
 th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--g300)}
 th{background:var(--g100);font-weight:600;font-size:13px}
 th[colspan]{padding-top:18px}
+td.pv{width:190px;padding:8px 12px}td.pv.dark{background:var(--g800)}td.pv img{display:block;height:36px;max-width:166px;object-fit:contain}td.pv.tall img{height:64px}
 code{background:var(--g100);padding:1px 6px;border-radius:3px;font-size:13px}
 .note{border-left:4px solid var(--red);background:var(--g100);padding:16px 20px;margin:22px 0;max-width:78ch}
 .note strong{display:block;margin-bottom:4px}
@@ -438,10 +439,16 @@ def logo_files(base):
 def build_logo_table():
     rows = []
     for group, items in LOGO_GROUPS:
-        rows.append(f'<tr><th colspan="2">{group}</th></tr>')
+        rows.append(f'<tr><th colspan="3">{group}</th></tr>')
         for base, label in items:
-            links = " · ".join(f'<a href="{RAW}/{f}/{base}.{f}">{f.upper()}</a>' for f in logo_files(base))
-            rows.append(f"<tr><td>{label}</td><td>{links}</td></tr>")
+            files = logo_files(base)
+            links = " · ".join(f'<a href="{RAW}/{f}/{base}.{f}">{f.upper()}</a>' for f in files)
+            ext = "svg" if "svg" in files else "png"
+            dark = "white" in base and "square" not in base
+            tall = "square" in base or "germany" in base
+            rows.append(f'<tr><td class="pv{" dark" if dark else ""}{" tall" if tall else ""}">'
+                        f'<img src="{RAW}/{ext}/{base}.{ext}" alt="{label}"></td>'
+                        f"<td>{label}</td><td>{links}</td></tr>")
     return "<table>" + "".join(rows) + "</table>"
 
 
