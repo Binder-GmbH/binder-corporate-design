@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="912" height="104" viewBox="0 0 912 104" role="img">
+<rect width="912" height="104" fill="#ffffff"/>
+<rect x="4" y="4" width="68" height="56" fill="#fde800" stroke="#cdcdcd" stroke-width="1"/>
+<text x="38" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">A</text>
+<text x="38" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#fde800</text>
+<rect x="80" y="4" width="68" height="56" fill="#fabb00" stroke="#cdcdcd" stroke-width="1"/>
+<text x="114" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">B</text>
+<text x="114" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#fabb00</text>
+<rect x="156" y="4" width="68" height="56" fill="#e95d0f" stroke="#cdcdcd" stroke-width="1"/>
+<text x="190" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">C</text>
+<text x="190" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#e95d0f</text>
+<rect x="232" y="4" width="68" height="56" fill="#e60000" stroke="#cdcdcd" stroke-width="1"/>
+<text x="266" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">D</text>
+<text x="266" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#e60000</text>
+<rect x="308" y="4" width="68" height="56" fill="#c3077f" stroke="#cdcdcd" stroke-width="1"/>
+<text x="342" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">E</text>
+<text x="342" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#c3077f</text>
+<rect x="384" y="4" width="68" height="56" fill="#622181" stroke="#cdcdcd" stroke-width="1"/>
+<text x="418" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">F</text>
+<text x="418" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#622181</text>
+<rect x="460" y="4" width="68" height="56" fill="#38378b" stroke="#cdcdcd" stroke-width="1"/>
+<text x="494" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">G</text>
+<text x="494" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#38378b</text>
+<rect x="536" y="4" width="68" height="56" fill="#006fb4" stroke="#cdcdcd" stroke-width="1"/>
+<text x="570" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">H</text>
+<text x="570" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#006fb4</text>
+<rect x="612" y="4" width="68" height="56" fill="#0099bf" stroke="#cdcdcd" stroke-width="1"/>
+<text x="646" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">I</text>
+<text x="646" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#0099bf</text>
+<rect x="688" y="4" width="68" height="56" fill="#26965e" stroke="#cdcdcd" stroke-width="1"/>
+<text x="722" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">J</text>
+<text x="722" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#26965e</text>
+<rect x="764" y="4" width="68" height="56" fill="#97bf29" stroke="#cdcdcd" stroke-width="1"/>
+<text x="798" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">K</text>
+<text x="798" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#97bf29</text>
+<rect x="840" y="4" width="68" height="56" fill="#bdcd00" stroke="#cdcdcd" stroke-width="1"/>
+<text x="874" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">L</text>
+<text x="874" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#bdcd00</text>
+</svg>

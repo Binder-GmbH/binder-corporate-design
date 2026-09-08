@@ -1,27 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="104" viewBox="0 0 880 104" role="img">
-<rect width="880" height="104" fill="#ffffff"/>
-<rect x="4" y="4" width="102" height="56" fill="#ffffff" stroke="#d8d8dd" stroke-width="1"/>
-<text x="55" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">White</text>
-<text x="55" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#ffffff</text>
-<rect x="114" y="4" width="102" height="56" fill="#f4f4f5" stroke="#d8d8dd" stroke-width="1"/>
-<text x="165" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">Porcelain 100</text>
-<text x="165" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#f4f4f5</text>
-<rect x="224" y="4" width="102" height="56" fill="#d8d8dd" stroke="#d8d8dd" stroke-width="1"/>
-<text x="275" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">Silver 300</text>
-<text x="275" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#d8d8dd</text>
-<rect x="334" y="4" width="102" height="56" fill="#9a9aa1" stroke="#d8d8dd" stroke-width="1"/>
-<text x="385" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">Concrete 500</text>
-<text x="385" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#9a9aa1</text>
-<rect x="444" y="4" width="102" height="56" fill="#404043" stroke="#d8d8dd" stroke-width="1"/>
-<text x="495" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">Anthracite 800</text>
-<text x="495" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#404043</text>
-<rect x="554" y="4" width="102" height="56" fill="#000000" stroke="#d8d8dd" stroke-width="1"/>
-<text x="605" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">Black</text>
-<text x="605" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#000000</text>
-<rect x="664" y="4" width="102" height="56" fill="#e60000" stroke="#d8d8dd" stroke-width="1"/>
-<text x="715" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">BINDER Red</text>
-<text x="715" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#e60000</text>
-<rect x="774" y="4" width="102" height="56" fill="#990000" stroke="#d8d8dd" stroke-width="1"/>
-<text x="825" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#252527">Red Dark</text>
-<text x="825" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#7a7a82">#990000</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="104" viewBox="0 0 440 104" role="img">
+<rect width="440" height="104" fill="#ffffff"/>
+<rect x="4" y="4" width="102" height="56" fill="#e60000" stroke="#cdcdcd" stroke-width="1"/>
+<text x="55" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">BINDER Red</text>
+<text x="55" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#e60000</text>
+<rect x="114" y="4" width="102" height="56" fill="#000000" stroke="#cdcdcd" stroke-width="1"/>
+<text x="165" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">Black</text>
+<text x="165" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#000000</text>
+<rect x="224" y="4" width="102" height="56" fill="#ffffff" stroke="#cdcdcd" stroke-width="1"/>
+<text x="275" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">White</text>
+<text x="275" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#ffffff</text>
+<rect x="334" y="4" width="102" height="56" fill="#990000" stroke="#cdcdcd" stroke-width="1"/>
+<text x="385" y="76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#000000">Red Dark</text>
+<text x="385" y="92" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#737373">#990000</text>
 </svg>

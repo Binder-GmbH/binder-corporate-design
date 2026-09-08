@@ -13,7 +13,7 @@ partners, suppliers and integrators**.
 | | |
 |---|---|
 | [**colors.md**](colors.md) | Full palette: primaries, gray scale, red scale, chart colours. Hex, CMYK, HKS, Pantone, RAL. |
-| [**typography.md**](typography.md) | FF Meta Pro, the substitutes, type rules and the hierarchy with concrete sizes. |
+| [**typography.md**](typography.md) | Source Sans 3, the substitutes, type rules and the hierarchy with concrete sizes. |
 | [**logo.md**](logo.md) | Clear space, positioning, minimum sizes, what is and is not permitted. |
 | [**logo/**](logo/) | The logo files themselves — SVG, PNG and PDF in all approved variants. |
 | [**design-principles.md**](design-principles.md) | The black/white/red triad, formal language, and the red line above titles. |
@@ -26,27 +26,18 @@ partners, suppliers and integrators**.
 ```
 
 ```css
-.headline { color: var(--binder-anthracite); }     /* or --binder-gray-800 */
-.accent   { color: var(--binder-binder-red); }
-.card     { background: var(--binder-porcelain); } /* or --binder-gray-100 */
-.border   { border-color: var(--binder-silver); }  /* or --binder-gray-300 */
+.headline { color: var(--binder-black); }
+.accent   { color: var(--binder-red); }
+.card     { background: var(--binder-gray-10); }   /* #f0f0f0 */
+.border   { border-color: var(--binder-gray-25); } /* #cdcdcd */
 ```
 
-Every gray has both a **name** (`--binder-slate`) and a **number**
-(`--binder-gray-600`) — they point at the same value. Names are for talking to
-people, numbers are for reading a scale.
-
-The nine grays are **Porcelain 100 · Pearl 200 · Silver 300 · Ash 400 ·
-Concrete 500 · Slate 600 · Basalt 700 · Anthracite 800 · Graphite 900**. White
-and black carry no number: they sit outside the ramp, as `$white` and `$black`
-do in Bootstrap.
+The gray shades are named by their print K value, so screen and print use the
+same reference: `--binder-gray-10`, `-25`, `-45`, `-65`.
 
 ## Two things that trip people up
 
-**Hex is for screen, CMYK is for print — do not convert between them.** The
-grays carry a slight blue cast on screen but print as pure K. That is
-deliberate: converted exactly, the cast comes to under 6 % cyan, and cyan that
-low cannot be reproduced reliably in offset printing.
+**Hex is for screen, CMYK is for print.**
 
 **The corporate typeface is free.** Source Sans 3 is open source — get it from
 Google Fonts, Adobe Fonts or GitHub, no licence to buy. It replaced FF Meta
@@ -89,6 +80,9 @@ published page in one go. Do not hand-edit the generated files.
 
 ## Source
 
-Derived from the BINDER Corporate Design Manual (01/2026) and the corporate
-colour palette. Where this repository and older documents disagree, the values
-here are the current ones — see the change notes in [colors.md](colors.md).
+The BINDER Corporate Design Manual, section Company colors / Unternehmensfarben
+and The font world / Schriftwelt. This repository restates those specifications
+in a form that is easier to work from; it does not extend or reinterpret them.
+
+For anything not covered here, or if something looks wrong, contact
+[marketing@binder-world.com](mailto:marketing@binder-world.com).
