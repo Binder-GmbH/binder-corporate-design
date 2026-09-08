@@ -2,7 +2,8 @@
 
 ## Source Sans 3
 
-The corporate typeface, designed by Paul D. Hunt. **Open source and free** — no
+The corporate typeface, used for everything: headlines, body copy, tables, charts,
+the web. Designed by Paul D. Hunt. **Open source and free** — no
 license to buy. Get it from [Google Fonts](https://fonts.google.com/specimen/Source+Sans+3),
 [Adobe Fonts](https://fonts.adobe.com/fonts/source-sans) or [GitHub](https://github.com/adobe-fonts/source-sans).
 
@@ -32,7 +33,7 @@ For A4. Scale other formats proportionally.
 | Running head, page numbers | SemiBold + Light | 8 pt, 65 % black |
 | Language marker on covers | Regular, caps, white | 12 pt |
 
-**Exception** — product catalogue and price list: H1 SemiBold 18 / 22 pt,
+**Exception** — product catalog and price list: H1 SemiBold 18 / 22 pt,
 subline Light 18 / 22 pt. Everything else unchanged.
 
 ## Rules
@@ -47,7 +48,7 @@ subline Light 18 / 22 pt. Everything else unchanged.
 
 ## Source Serif 4
 
-The serif companion, for emotional text such as quotations. Same origin as
+The serif companion, for quotations and emotional text only. Same origin as
 Source Sans 3, also open source and free:
 [Google Fonts](https://fonts.google.com/specimen/Source+Serif+4),
 [Adobe Fonts](https://fonts.adobe.com/fonts/source-serif),
@@ -56,7 +57,9 @@ Source Sans 3, also open source and free:
 
 ## Substitutes
 
-| Instead of | Use | When |
+Only where the originals cannot be installed.
+
+| Where | Instead of | Use |
 |---|---|---|
-| Source Sans 3 | **Arial Unicode MS** | Office and Word templates; covers Chinese characters |
-| Source Serif 4 | **Georgia** | Quotations in substitute settings |
+| Office and Word templates; also covers Chinese characters | Source Sans 3 | Arial Unicode MS |
+| Quotations in those settings | Source Serif 4 | Georgia |
