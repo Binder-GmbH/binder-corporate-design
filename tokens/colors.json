@@ -1,38 +1,51 @@
 {
-  "$comment": "BINDER corporate colours as specified in the BINDER Corporate Design Manual. Hex applies to screen, CMYK to print.",
+  "$comment": "BINDER corporate colours. Hex applies to screen, CMYK to print. Grays print as pure K: the slight blue cast of the screen values converts to under 6% cyan, below what offset printing reproduces reliably.",
   "version": "2026",
-  "source": "BINDER Corporate Design Manual, section Unternehmensfarben / Company colors",
+  "scaleNote": "Nine grays numbered 100 (lightest) to 900 (darkest), the same direction as CSS font-weight. White and Black carry no number: they sit outside the ramp, as $white and $black do in Bootstrap and Tailwind.",
   "primary": {
-    "binderRed": { "hex": "#e60000", "cmyk": "0/100/100/0", "hks": "HKS 14", "pantone": "Pantone 485", "ral": "RAL 3020 Traffic Red", "use": "Highlight colour in type, graphic elements, icons, elements to be emphasised" },
-    "black":     { "hex": "#000000", "cmyk": "0/0/0/100",   "hks": "HKS 88", "pantone": "Pantone 426", "ral": "RAL 9005 Jet Black", "use": "Primary text colour, base for graphics and icons — avoid large full-coverage areas" },
-    "white":     { "hex": "#ffffff", "cmyk": "0/0/0/0",     "ral": "RAL 9003 Signal White", "use": "Used generously for structure, backgrounds, white space and negative applications" },
-    "redDark":   { "hex": "#990000", "cmyk": "24/100/100/27", "hks": "HKS 16", "ral": "RAL 3003 Ruby Red", "use": "Accent colour alongside BINDER Red: graphics, icons, mouseover state of red buttons" }
+    "white":      { "hex": "#ffffff", "cmyk": "0/0/0/0",       "ral": "RAL 9003 Signal White", "use": "Structure, backgrounds, white space, negative applications" },
+    "porcelain":  { "hex": "#f4f4f5", "cmyk": "0/0/0/10", "scale": 100, "use": "Sections, cards, subtle backgrounds" },
+    "silver":     { "hex": "#d8d8dd", "cmyk": "0/0/0/25", "scale": 300, "use": "Borders, secondary elements" },
+    "concrete":   { "hex": "#9a9aa1", "cmyk": "0/0/0/45", "scale": 500, "use": "Muted text, dividers, secondary UI elements" },
+    "anthracite": { "hex": "#404043", "cmyk": "0/0/0/75", "scale": 800, "use": "Text and important UI elements — the dark tone that is not black" },
+    "black":      { "hex": "#000000", "cmyk": "0/0/0/100", "hks": "HKS 88", "pantone": "Pantone 426", "ral": "RAL 9005 Jet Black", "use": "Primary text colour, base for graphics and icons — avoid large full-coverage areas" },
+    "binderRed":  { "hex": "#e60000", "cmyk": "0/100/100/0", "hks": "HKS 14", "pantone": "Pantone 485", "ral": "RAL 3020 Traffic Red", "use": "Highlight colour, graphic elements, icons, emphasis" },
+    "redDark":    { "hex": "#990000", "cmyk": "24/100/100/27", "hks": "HKS 16", "ral": "RAL 3003 Ruby Red", "use": "Accent alongside BINDER Red, contrast, mouseover state of red buttons" }
   },
-  "redShades": [
-    { "hex": "#e95e40", "cmyk": "0/75/75/0", "rgb": "233/94/64" },
-    { "hex": "#ff9999", "cmyk": "0/40/40/0", "rgb": "255/153/153" },
-    { "hex": "#ffcccc", "cmyk": "0/20/20/0", "rgb": "255/204/204" }
+  "grayScale": [
+    { "name": "White",      "scale": null, "hex": "#ffffff", "cmyk": "0/0/0/0" },
+    { "name": "Porcelain",  "scale": 100,  "hex": "#f4f4f5", "cmyk": "0/0/0/10" },
+    { "name": "Pearl",      "scale": 200,  "hex": "#e6e6e9", "cmyk": "0/0/0/15" },
+    { "name": "Silver",     "scale": 300,  "hex": "#d8d8dd", "cmyk": "0/0/0/25" },
+    { "name": "Ash",        "scale": 400,  "hex": "#b8b8c0", "cmyk": "0/0/0/30" },
+    { "name": "Concrete",   "scale": 500,  "hex": "#9a9aa1", "cmyk": "0/0/0/45" },
+    { "name": "Slate",      "scale": 600,  "hex": "#7a7a82", "cmyk": "0/0/0/50" },
+    { "name": "Basalt",     "scale": 700,  "hex": "#5a5a5f", "cmyk": "0/0/0/65" },
+    { "name": "Anthracite", "scale": 800,  "hex": "#404043", "cmyk": "0/0/0/75" },
+    { "name": "Graphite",   "scale": 900,  "hex": "#252527", "cmyk": "0/0/0/85" },
+    { "name": "Black",      "scale": null, "hex": "#000000", "cmyk": "0/0/0/100" }
   ],
-  "blackShades": [
-    { "hex": "#737373", "cmyk": "0/0/0/65", "rgb": "115/115/115" },
-    { "hex": "#969696", "cmyk": "0/0/0/45", "rgb": "150/150/150" },
-    { "hex": "#cdcdcd", "cmyk": "0/0/0/25", "rgb": "205/205/205" },
-    { "hex": "#f0f0f0", "cmyk": "0/0/0/10", "rgb": "240/240/240" }
+  "redScale": [
+    { "name": "Blush",      "scale": 100,  "hex": "#ffcccc", "cmyk": "0/20/20/0" },
+    { "name": "Salmon",     "scale": 200,  "hex": "#ff9999", "cmyk": "0/40/40/0" },
+    { "name": "Coral",      "scale": 300,  "hex": "#e95e40", "cmyk": "0/75/75/0" },
+    { "name": "BINDER Red", "scale": null, "hex": "#e60000", "cmyk": "0/100/100/0" },
+    { "name": "Red Dark",   "scale": null, "hex": "#990000", "cmyk": "24/100/100/27" }
   ],
   "green": { "name": "BINDER Green", "hex": "#97bf29", "cmyk": "75/0/100/0", "use": "Sustainability and eco topics (BINDER goes green)" },
   "chart": [
-    { "key": "A", "hex": "#fde800", "cmyk": "5/0/100/0",   "rgb": "253/232/0" },
-    { "key": "B", "hex": "#fabb00", "cmyk": "0/30/100/0",  "rgb": "250/187/0" },
-    { "key": "C", "hex": "#e95d0f", "cmyk": "0/75/100/0",  "rgb": "233/93/15" },
-    { "key": "D", "hex": "#e60000", "cmyk": "0/100/100/0", "rgb": "230/0/0" },
-    { "key": "E", "hex": "#c3077f", "cmyk": "22/97/0/0",   "rgb": "195/7/127" },
-    { "key": "F", "hex": "#622181", "cmyk": "75/100/0/0",  "rgb": "98/33/129" },
-    { "key": "G", "hex": "#38378b", "cmyk": "90/90/0/0",   "rgb": "56/55/139" },
-    { "key": "H", "hex": "#006fb4", "cmyk": "90/50/0/0",   "rgb": "0/111/180" },
-    { "key": "I", "hex": "#0099bf", "cmyk": "80/20/15/0",  "rgb": "0/153/191" },
-    { "key": "J", "hex": "#26965e", "cmyk": "80/15/75/0",  "rgb": "38/150/94" },
-    { "key": "K", "hex": "#97bf29", "cmyk": "50/0/95/0",   "rgb": "151/191/41" },
-    { "key": "L", "hex": "#bdcd00", "cmyk": "35/0/100/0",  "rgb": "189/205/0" }
+    { "key": "A", "hex": "#fde800", "cmyk": "5/0/100/0" },
+    { "key": "B", "hex": "#fabb00", "cmyk": "0/30/100/0" },
+    { "key": "C", "hex": "#e95d0f", "cmyk": "0/75/100/0" },
+    { "key": "D", "hex": "#e60000", "cmyk": "0/100/100/0" },
+    { "key": "E", "hex": "#c3077f", "cmyk": "22/97/0/0" },
+    { "key": "F", "hex": "#622181", "cmyk": "75/100/0/0" },
+    { "key": "G", "hex": "#38378b", "cmyk": "90/90/0/0" },
+    { "key": "H", "hex": "#006fb4", "cmyk": "90/50/0/0" },
+    { "key": "I", "hex": "#0099bf", "cmyk": "80/20/15/0" },
+    { "key": "J", "hex": "#26965e", "cmyk": "80/15/75/0" },
+    { "key": "K", "hex": "#97bf29", "cmyk": "50/0/95/0" },
+    { "key": "L", "hex": "#bdcd00", "cmyk": "35/0/100/0" }
   ],
   "chartSequences": {
     "1": "A", "2": "AD", "3": "ADH", "4": "ADHK", "5": "ADGJL", "6": "ACEGIK",

@@ -26,18 +26,27 @@ partners, suppliers and integrators**.
 ```
 
 ```css
-.headline { color: var(--binder-black); }
-.accent   { color: var(--binder-red); }
-.card     { background: var(--binder-gray-10); }   /* #f0f0f0 */
-.border   { border-color: var(--binder-gray-25); } /* #cdcdcd */
+.headline { color: var(--binder-anthracite); }     /* or --binder-gray-800 */
+.accent   { color: var(--binder-binder-red); }
+.card     { background: var(--binder-porcelain); } /* or --binder-gray-100 */
+.border   { border-color: var(--binder-silver); }  /* or --binder-gray-300 */
 ```
 
-The gray shades are named by their print K value, so screen and print use the
-same reference: `--binder-gray-10`, `-25`, `-45`, `-65`.
+Every gray has both a **name** (`--binder-slate`) and a **number**
+(`--binder-gray-600`) pointing at the same value. Names are for talking to
+people, numbers for reading a scale.
+
+The nine grays: **Porcelain 100 · Pearl 200 · Silver 300 · Ash 400 ·
+Concrete 500 · Slate 600 · Basalt 700 · Anthracite 800 · Graphite 900**.
+White and black carry no number — they sit outside the ramp, as `$white` and
+`$black` do in Bootstrap.
 
 ## Two things that trip people up
 
-**Hex is for screen, CMYK is for print.**
+**Hex is for screen, CMYK is for print — do not convert between them.** The
+grays carry a slight blue cast on screen but print as pure K. Converted
+exactly, the cast comes to under 6 % cyan, which offset printing cannot
+reproduce reliably.
 
 **The corporate typeface is free.** Source Sans 3 is open source — get it from
 Google Fonts, Adobe Fonts or GitHub, no licence to buy. It replaced FF Meta
