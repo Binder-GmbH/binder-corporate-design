@@ -132,7 +132,7 @@ def build_markdown():
            "`font-weight`.", "",
            "White and black carry no number. They sit outside the ramp, exactly as `$white` and",
            "`$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.", "",
-           "| Name | Scale | Hex | CMYK | L\\* | Step | CMYK, screen match (not for print) |", "|---|---|---|---|---|---|---|"]
+           "| Name | Scale | Hex | CMYK | L\\* | Step | K with blue cast (for discussion, not a print value) |", "|---|---|---|---|---|---|---|"]
     prev = None
     for r in GRAYS:
         L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"; prev = L
@@ -295,7 +295,7 @@ def build_page():
              'more widely, because the eye separates dark tones less well anyway.</p>')
     h.append('<h3>The gray scale in detail</h3>'
              '<table class="lstar"><tr><th>Name</th><th>Scale</th><th>Hex</th><th>CMYK</th><th>L*</th>'
-             '<th>Δ</th><th class="muted">CMYK, screen match <span class="tag">not for print</span></th></tr>')
+             '<th>Δ</th><th class="muted">K with blue cast <span class="tag">for discussion, not a print value</span></th></tr>')
     prev = None
     for r in GRAYS:
         L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"

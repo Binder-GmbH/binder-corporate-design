@@ -37,7 +37,7 @@ The scale runs 100 (lightest) to 900 (darkest), the same direction as CSS
 White and black carry no number. They sit outside the ramp, exactly as `$white` and
 `$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.
 
-| Name | Scale | Hex | CMYK | L\* | Step | CMYK, screen match (not for print) |
+| Name | Scale | Hex | CMYK | L\* | Step | K with blue cast (for discussion, not a print value) |
 |---|---|---|---|---|---|---|
 | **White** | — | `#ffffff` | 0/0/0/0 | 100.0 | — | 0/0/0/0 |
 | **Porcelain** | 100 | `#f4f4f5` | 0/0/0/5 | 96.2 | 3.8 | 1/1/0/5 |
