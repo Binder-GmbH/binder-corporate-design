@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BINDER Corporate Design</title>
+<style>
+:root{--w:#fff;--g100:#f4f4f5;--g300:#d8d8dd;--g500:#9a9aa1;--g600:#7a7a82;--g700:#5a5a5f;--g900:#252527;--red:#e60000}
+*{box-sizing:border-box}
+body{margin:0;background:var(--g100);color:var(--g900);font:15px/1.6 "Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;background:var(--w);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.07)}
+header{padding:56px 44px 40px;border-bottom:1px solid var(--g300)}
+.rule{width:58px;height:6px;background:var(--red);margin-bottom:18px}
+h1{margin:0;font-size:38px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
+header p{margin:12px 0 0;color:var(--g700);font-size:17px;max-width:62ch}
+header .meta{margin-top:20px;font-size:13px;color:var(--g600)}
+header a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(230,0,0,.3)}
+section{padding:44px}section+section{border-top:1px solid var(--g300)}
+h2{font-size:25px;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;position:relative;padding-top:14px}
+h2::before{content:"";position:absolute;top:0;left:0;width:2.6ch;height:2.5px;background:var(--red)}
+h3{font-size:16px;margin:34px 0 10px;font-weight:700}
+.lead{color:var(--g700);margin:0 0 26px;max-width:70ch}
+.grid{display:grid;gap:2px;background:var(--g300);border:1px solid var(--g300)}
+.c8{grid-template-columns:repeat(8,1fr)}.c11{grid-template-columns:repeat(11,1fr)}
+.c5{grid-template-columns:repeat(5,1fr)}.c12{grid-template-columns:repeat(12,1fr)}
+.sw{aspect-ratio:1;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+ color:#fff;cursor:pointer;font:inherit;padding:7px;text-align:center;position:relative;transition:transform .18s ease,box-shadow .18s ease}
+.sw.light{color:var(--g900)}
+.sw:hover{transform:scale(1.09);z-index:5;box-shadow:0 6px 22px rgba(0,0,0,.28)}
+.sw .nm{font-size:11.5px;font-weight:700;line-height:1.2}
+.sw .n{display:block;font-weight:400;opacity:.72;font-size:10px}
+.sw .cd{font-size:9px;opacity:.88;line-height:1.4}
+.sw.copied::after{content:"copied";position:absolute;top:5px;right:5px;background:var(--red);color:#fff;font-size:9px;padding:2px 5px;border-radius:2px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:14px 0}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--g300)}
+th{background:var(--g100);font-weight:700;font-size:13px}
+code{background:var(--g100);padding:1px 6px;border-radius:3px;font-size:13px}
+.note{border-left:4px solid var(--red);background:var(--g100);padding:16px 20px;margin:22px 0;max-width:78ch}
+.note strong{display:block;margin-bottom:4px}
+.bars{display:flex;align-items:flex-end;gap:4px;height:190px;margin:26px 0 8px}
+.bars div{flex:1;border-radius:2px 2px 0 0;position:relative}
+.bars span{position:absolute;top:-19px;left:0;right:0;text-align:center;font-size:11px;color:var(--g600)}
+.cap{font-size:13px;color:var(--g600);margin-top:6px}
+.specimen{border:1px solid var(--g300);padding:30px 34px;margin:16px 0}
+.specimen div{margin:0 0 14px}
+.sp-h1{font-size:31px;font-weight:700;line-height:1.25}
+.sp-sub{font-size:31px;font-weight:300;line-height:1.25;color:var(--g600)}
+.sp-h2{font-size:21px;font-weight:400}
+.sp-h3{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.07em}
+.sp-body{font-size:13px;max-width:62ch}
+.sp-cap{font-size:11px;font-weight:300;color:var(--g600)}
+.tag{font-size:11px;color:var(--g500);font-weight:400;text-transform:none;letter-spacing:0;margin-left:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+ul.rules{font-size:14px;line-height:1.75;padding-left:20px}
+footer{padding:34px 44px 50px;border-top:1px solid var(--g300);font-size:13px;color:var(--g600)}
+footer a{color:var(--red)}
+.seqrow span{display:inline-block;width:16px;height:16px;margin-right:3px;vertical-align:-3px;border-radius:2px}
+@media(max-width:820px){.two{grid-template-columns:1fr}.c11,.c8{grid-template-columns:repeat(4,1fr)}
+ .c12{grid-template-columns:repeat(6,1fr)}section{padding:30px 22px}header{padding:38px 22px 30px}h1{font-size:29px}}
+</style></head><body><div class="wrap">
+<header><div class="rule"></div><h1>BINDER Corporate Design</h1>
+<p>Colours, typography and logo rules for anyone producing material in the BINDER design — agencies, partners, suppliers and integrators.</p>
+<div class="meta">Version 2026-01 · <a href="https://github.com/Binder-GmbH/binder-corporate-design">Repository on GitHub</a> · Click any colour to copy its hex value</div></header>
+<section><h2>The triad</h2><p class="lead">Black, white and BINDER Red produce the primary BINDER colour impression. This triad is the core of the appearance and a design element in its own right. Everything else supports it and must never dilute its contrast.</p>
+<div class="two"><div><h3>How the three are used</h3><table>
+<tr><th>Colour</th><th>Role</th></tr>
+<tr><td><strong>White</strong></td><td>Used generously and over large areas: structure, backgrounds, white space, negative applications. White is what gives the triad its contrast.</td></tr>
+<tr><td><strong>Black</strong></td><td>Primary text colour, base for graphics and icons. Avoid large, full-coverage black areas.</td></tr>
+<tr><td><strong>BINDER Red</strong></td><td>The highlight: emphasis in type, graphic elements, icons, anything that has to stand out.</td></tr></table></div>
+<div><h3>Formal language</h3><table><tr><th>Do</th><th>Don't</th></tr>
+<tr><td>Horizontal and vertical forms</td><td>Organic shapes</td></tr>
+<tr><td>Circular elements as accents</td><td>Large diagonal areas or lines</td></tr>
+<tr><td>Plenty of white space</td><td>Decorative elements</td></tr>
+<tr><td>Clear information hierarchy</td><td>Unusual styling</td></tr>
+</table></div></div></section>
+<section><h2>Colours</h2><p class="lead">Hex values apply to screen, CMYK values to print.</p>
+<h3>Primary colours</h3><div class="grid c8">
+<button class="sw light" style="background:#ffffff" data-hex="#ffffff"><span class="nm">White</span><span class="cd">#ffffff<br>0/0/0/0</span></button>
+<button class="sw light" style="background:#f4f4f5" data-hex="#f4f4f5"><span class="nm">Porcelain<span class="n">100</span></span><span class="cd">#f4f4f5<br>0/0/0/10</span></button>
+<button class="sw light" style="background:#d8d8dd" data-hex="#d8d8dd"><span class="nm">Silver<span class="n">300</span></span><span class="cd">#d8d8dd<br>0/0/0/25</span></button>
+<button class="sw light" style="background:#9a9aa1" data-hex="#9a9aa1"><span class="nm">Concrete<span class="n">500</span></span><span class="cd">#9a9aa1<br>0/0/0/45</span></button>
+<button class="sw " style="background:#404043" data-hex="#404043"><span class="nm">Anthracite<span class="n">800</span></span><span class="cd">#404043<br>0/0/0/75</span></button>
+<button class="sw " style="background:#000000" data-hex="#000000"><span class="nm">Black</span><span class="cd">#000000<br>0/0/0/100</span></button>
+<button class="sw " style="background:#e60000" data-hex="#e60000"><span class="nm">BINDER Red</span><span class="cd">#e60000<br>0/100/100/0</span></button>
+<button class="sw " style="background:#990000" data-hex="#990000"><span class="nm">Red Dark</span><span class="cd">#990000<br>24/100/100/27</span></button>
+</div><table><tr><th>Colour</th><th>Hex</th><th>CMYK</th><th>Print references</th><th>Use</th></tr>
+<tr><td><strong>White</strong></td><td><code>#ffffff</code></td><td>0/0/0/0</td><td>RAL 9003 Signal White</td><td>Structure, backgrounds, white space, negative applications</td></tr>
+<tr><td><strong>Porcelain</strong></td><td><code>#f4f4f5</code></td><td>0/0/0/10</td><td>—</td><td>Sections, cards, subtle backgrounds</td></tr>
+<tr><td><strong>Silver</strong></td><td><code>#d8d8dd</code></td><td>0/0/0/25</td><td>—</td><td>Borders, secondary elements</td></tr>
+<tr><td><strong>Concrete</strong></td><td><code>#9a9aa1</code></td><td>0/0/0/45</td><td>—</td><td>Muted text, dividers, secondary UI elements</td></tr>
+<tr><td><strong>Anthracite</strong></td><td><code>#404043</code></td><td>0/0/0/75</td><td>—</td><td>Text, important UI elements — the dark tone that is not black</td></tr>
+<tr><td><strong>Black</strong></td><td><code>#000000</code></td><td>0/0/0/100</td><td>HKS 88, Pantone 426, RAL 9005 Jet Black</td><td>Primary text colour, base for graphics and icons — not as a full-coverage background</td></tr>
+<tr><td><strong>BINDER Red</strong></td><td><code>#e60000</code></td><td>0/100/100/0</td><td>HKS 14, Pantone 485, RAL 3020 Traffic Red</td><td>Highlight colour, graphic elements, icons, emphasis</td></tr>
+<tr><td><strong>Red Dark</strong></td><td><code>#990000</code></td><td>24/100/100/27</td><td>HKS 16, RAL 3003 Ruby Red</td><td>Accents alongside BINDER Red, contrast, hover state of red buttons</td></tr>
+</table>
+<h3>Gray scale <span class="tag">100 lightest · 900 darkest · white and black sit outside the ramp</span></h3><div class="grid c11">
+<button class="sw light" style="background:#ffffff" data-hex="#ffffff"><span class="nm">White</span><span class="cd">#ffffff<br>0/0/0/0<br>L* 100.0</span></button>
+<button class="sw light" style="background:#f4f4f5" data-hex="#f4f4f5"><span class="nm">Porcelain<span class="n">100</span></span><span class="cd">#f4f4f5<br>0/0/0/10<br>L* 96.2</span></button>
+<button class="sw light" style="background:#e6e6e9" data-hex="#e6e6e9"><span class="nm">Pearl<span class="n">200</span></span><span class="cd">#e6e6e9<br>0/0/0/15<br>L* 91.4</span></button>
+<button class="sw light" style="background:#d8d8dd" data-hex="#d8d8dd"><span class="nm">Silver<span class="n">300</span></span><span class="cd">#d8d8dd<br>0/0/0/25<br>L* 86.5</span></button>
+<button class="sw light" style="background:#b8b8c0" data-hex="#b8b8c0"><span class="nm">Ash<span class="n">400</span></span><span class="cd">#b8b8c0<br>0/0/0/30<br>L* 75.0</span></button>
+<button class="sw light" style="background:#9a9aa1" data-hex="#9a9aa1"><span class="nm">Concrete<span class="n">500</span></span><span class="cd">#9a9aa1<br>0/0/0/45<br>L* 63.8</span></button>
+<button class="sw " style="background:#7a7a82" data-hex="#7a7a82"><span class="nm">Slate<span class="n">600</span></span><span class="cd">#7a7a82<br>0/0/0/50<br>L* 51.5</span></button>
+<button class="sw " style="background:#5a5a5f" data-hex="#5a5a5f"><span class="nm">Basalt<span class="n">700</span></span><span class="cd">#5a5a5f<br>0/0/0/65<br>L* 38.4</span></button>
+<button class="sw " style="background:#404043" data-hex="#404043"><span class="nm">Anthracite<span class="n">800</span></span><span class="cd">#404043<br>0/0/0/75<br>L* 27.2</span></button>
+<button class="sw " style="background:#252527" data-hex="#252527"><span class="nm">Graphite<span class="n">900</span></span><span class="cd">#252527<br>0/0/0/85<br>L* 14.8</span></button>
+<button class="sw " style="background:#000000" data-hex="#000000"><span class="nm">Black</span><span class="cd">#000000<br>0/0/0/100<br>L* 0.0</span></button>
+</div><div class="bars">
+<div style="height:100.0%;background:#ffffff;border:1px solid #d8d8dd;"><span>W</span></div>
+<div style="height:96.2%;background:#f4f4f5;border:1px solid #d8d8dd;"><span>100</span></div>
+<div style="height:91.4%;background:#e6e6e9;border:1px solid #d8d8dd;"><span>200</span></div>
+<div style="height:86.5%;background:#d8d8dd;"><span>300</span></div>
+<div style="height:75.0%;background:#b8b8c0;"><span>400</span></div>
+<div style="height:63.8%;background:#9a9aa1;"><span>500</span></div>
+<div style="height:51.5%;background:#7a7a82;"><span>600</span></div>
+<div style="height:38.4%;background:#5a5a5f;"><span>700</span></div>
+<div style="height:27.2%;background:#404043;"><span>800</span></div>
+<div style="height:14.8%;background:#252527;"><span>900</span></div>
+<div style="height:3%;background:#000000;"><span>B</span></div>
+</div><p class="cap">Bar height = perceived lightness (L*). The ramp is denser at the light end on purpose: pale surface tones get used over large areas, where small differences matter.</p>
+<table><tr><th>Name</th><th>Scale</th><th>Hex</th><th>CMYK</th><th>L*</th><th>Step</th><th>Previously</th></tr>
+<tr><td><strong>White</strong></td><td>—</td><td><code>#ffffff</code></td><td>0/0/0/0</td><td>100.0</td><td>—</td><td>unchanged</td></tr>
+<tr><td><strong>Porcelain</strong></td><td>100</td><td><code>#f4f4f5</code></td><td>0/0/0/10</td><td>96.2</td><td>3.8</td><td>Light Gray</td></tr>
+<tr><td><strong>Pearl</strong></td><td>200</td><td><code>#e6e6e9</code></td><td>0/0/0/15</td><td>91.4</td><td>4.8</td><td><strong style="color:#e60000">new</strong></td></tr>
+<tr><td><strong>Silver</strong></td><td>300</td><td><code>#d8d8dd</code></td><td>0/0/0/25</td><td>86.5</td><td>4.9</td><td>Gray</td></tr>
+<tr><td><strong>Ash</strong></td><td>400</td><td><code>#b8b8c0</code></td><td>0/0/0/30</td><td>75.0</td><td>11.5</td><td>Medium Gray</td></tr>
+<tr><td><strong>Concrete</strong></td><td>500</td><td><code>#9a9aa1</code></td><td>0/0/0/45</td><td>63.8</td><td>11.2</td><td>Dark Gray</td></tr>
+<tr><td><strong>Slate</strong></td><td>600</td><td><code>#7a7a82</code></td><td>0/0/0/50</td><td>51.5</td><td>12.3</td><td>Darker Gray</td></tr>
+<tr><td><strong>Basalt</strong></td><td>700</td><td><code>#5a5a5f</code></td><td>0/0/0/65</td><td>38.4</td><td>13.1</td><td>Graphite Light</td></tr>
+<tr><td><strong>Anthracite</strong></td><td>800</td><td><code>#404043</code></td><td>0/0/0/75</td><td>27.2</td><td>11.2</td><td><strong style="color:#e60000">new</strong></td></tr>
+<tr><td><strong>Graphite</strong></td><td>900</td><td><code>#252527</code></td><td>0/0/0/85</td><td>14.8</td><td>12.4</td><td>unchanged</td></tr>
+<tr><td><strong>Black</strong></td><td>—</td><td><code>#000000</code></td><td>0/0/0/100</td><td>0.0</td><td>14.8</td><td>unchanged</td></tr>
+</table>
+<div class="note"><strong>Hex is for screen, CMYK is for print — do not convert between them.</strong> The grays carry a slight blue cast on screen but print as pure K with no CMY component. That is deliberate: converted exactly, the cast comes to under 6&nbsp;% cyan, and cyan values that low cannot be reproduced reliably in offset printing.</div>
+<div class="note"><strong>White and black carry no number.</strong> They sit outside the ramp, exactly as <code>$white</code> and <code>$black</code> do in Bootstrap and Tailwind. A <code>0</code> would read as <code>#000</code> — which is black.</div>
+<h3>Red scale <span class="tag">BINDER Red and Red Dark are brand colours, not ramp steps</span></h3><div class="grid c5">
+<button class="sw light" style="background:#ffcccc" data-hex="#ffcccc"><span class="nm">Blush<span class="n">100</span></span><span class="cd">#ffcccc<br>0/20/20/0</span></button>
+<button class="sw light" style="background:#ff9999" data-hex="#ff9999"><span class="nm">Salmon<span class="n">200</span></span><span class="cd">#ff9999<br>0/40/40/0</span></button>
+<button class="sw light" style="background:#e95e40" data-hex="#e95e40"><span class="nm">Coral<span class="n">300</span></span><span class="cd">#e95e40<br>0/75/75/0</span></button>
+<button class="sw " style="background:#e60000" data-hex="#e60000"><span class="nm">BINDER Red</span><span class="cd">#e60000<br>0/100/100/0</span></button>
+<button class="sw " style="background:#990000" data-hex="#990000"><span class="nm">Red Dark</span><span class="cd">#990000<br>24/100/100/27</span></button>
+</div>
+<h3>BINDER Green <span class="tag">sustainability and eco topics only</span></h3><div class="grid c5">
+<button class="sw light" style="background:#97bf29" data-hex="#97bf29"><span class="nm">BINDER Green</span><span class="cd">#97bf29<br>75/0/100/0</span></button>
+<div style="grid-column:span 4;background:#fff;padding:22px;color:#7a7a82;font-size:14px;display:flex;align-items:center">Reserved for BINDER goes green. Not a general-purpose accent — using it elsewhere weakens the black/white/red triad.</div></div>
+<h3>Chart colours</h3><div class="grid c12">
+<button class="sw light" style="background:#fde800" data-hex="#fde800"><span class="nm">A</span><span class="cd">#fde800<br>5/0/100/0</span></button>
+<button class="sw light" style="background:#fabb00" data-hex="#fabb00"><span class="nm">B</span><span class="cd">#fabb00<br>0/30/100/0</span></button>
+<button class="sw light" style="background:#e95d0f" data-hex="#e95d0f"><span class="nm">C</span><span class="cd">#e95d0f<br>0/75/100/0</span></button>
+<button class="sw " style="background:#e60000" data-hex="#e60000"><span class="nm">D</span><span class="cd">#e60000<br>0/100/100/0</span></button>
+<button class="sw " style="background:#c3077f" data-hex="#c3077f"><span class="nm">E</span><span class="cd">#c3077f<br>22/97/0/0</span></button>
+<button class="sw " style="background:#622181" data-hex="#622181"><span class="nm">F</span><span class="cd">#622181<br>75/100/0/0</span></button>
+<button class="sw " style="background:#38378b" data-hex="#38378b"><span class="nm">G</span><span class="cd">#38378b<br>90/90/0/0</span></button>
+<button class="sw " style="background:#006fb4" data-hex="#006fb4"><span class="nm">H</span><span class="cd">#006fb4<br>90/50/0/0</span></button>
+<button class="sw light" style="background:#0099bf" data-hex="#0099bf"><span class="nm">I</span><span class="cd">#0099bf<br>80/20/15/0</span></button>
+<button class="sw light" style="background:#26965e" data-hex="#26965e"><span class="nm">J</span><span class="cd">#26965e<br>80/15/75/0</span></button>
+<button class="sw light" style="background:#97bf29" data-hex="#97bf29"><span class="nm">K</span><span class="cd">#97bf29<br>50/0/95/0</span></button>
+<button class="sw light" style="background:#bdcd00" data-hex="#bdcd00"><span class="nm">L</span><span class="cd">#bdcd00<br>35/0/100/0</span></button>
+</div><p class="cap">Do not pick freely — use the prescribed sequence for the number of values in your chart.</p><table class="seqrow"><tr><th>Values</th><th>Sequence</th></tr>
+<tr><td><strong>1</strong></td><td><span style="background:#fde800"></span> &nbsp;A</td></tr>
+<tr><td><strong>2</strong></td><td><span style="background:#fde800"></span><span style="background:#e60000"></span> &nbsp;A · D</td></tr>
+<tr><td><strong>3</strong></td><td><span style="background:#fde800"></span><span style="background:#e60000"></span><span style="background:#006fb4"></span> &nbsp;A · D · H</td></tr>
+<tr><td><strong>4</strong></td><td><span style="background:#fde800"></span><span style="background:#e60000"></span><span style="background:#006fb4"></span><span style="background:#97bf29"></span> &nbsp;A · D · H · K</td></tr>
+<tr><td><strong>5</strong></td><td><span style="background:#fde800"></span><span style="background:#e60000"></span><span style="background:#38378b"></span><span style="background:#26965e"></span><span style="background:#bdcd00"></span> &nbsp;A · D · G · J · L</td></tr>
+<tr><td><strong>6</strong></td><td><span style="background:#fde800"></span><span style="background:#e95d0f"></span><span style="background:#c3077f"></span><span style="background:#38378b"></span><span style="background:#0099bf"></span><span style="background:#97bf29"></span> &nbsp;A · C · E · G · I · K</td></tr>
+<tr><td><strong>7</strong></td><td><span style="background:#fde800"></span><span style="background:#e95d0f"></span><span style="background:#c3077f"></span><span style="background:#38378b"></span><span style="background:#0099bf"></span><span style="background:#26965e"></span><span style="background:#bdcd00"></span> &nbsp;A · C · E · G · I · J · L</td></tr>
+<tr><td><strong>8</strong></td><td><span style="background:#fde800"></span><span style="background:#fabb00"></span><span style="background:#e60000"></span><span style="background:#622181"></span><span style="background:#006fb4"></span><span style="background:#0099bf"></span><span style="background:#97bf29"></span><span style="background:#bdcd00"></span> &nbsp;A · B · D · F · H · I · K · L</td></tr>
+<tr><td><strong>9</strong></td><td><span style="background:#fde800"></span><span style="background:#fabb00"></span><span style="background:#e60000"></span><span style="background:#c3077f"></span><span style="background:#38378b"></span><span style="background:#006fb4"></span><span style="background:#0099bf"></span><span style="background:#97bf29"></span><span style="background:#bdcd00"></span> &nbsp;A · B · D · E · G · H · I · K · L</td></tr>
+<tr><td><strong>10</strong></td><td><span style="background:#fde800"></span><span style="background:#fabb00"></span><span style="background:#e60000"></span><span style="background:#c3077f"></span><span style="background:#38378b"></span><span style="background:#006fb4"></span><span style="background:#0099bf"></span><span style="background:#26965e"></span><span style="background:#97bf29"></span><span style="background:#bdcd00"></span> &nbsp;A · B · D · E · G · H · I · J · K · L</td></tr>
+<tr><td><strong>11</strong></td><td><span style="background:#fde800"></span><span style="background:#fabb00"></span><span style="background:#e95d0f"></span><span style="background:#e60000"></span><span style="background:#c3077f"></span><span style="background:#38378b"></span><span style="background:#006fb4"></span><span style="background:#0099bf"></span><span style="background:#26965e"></span><span style="background:#97bf29"></span><span style="background:#bdcd00"></span> &nbsp;A · B · C · D · E · G · H · I · J · K · L</td></tr>
+</table></section>
+<section><h2>Typography</h2>
+<p class="lead">The corporate typeface is <strong>FF Meta Pro</strong>, designed by Erik Spiekermann.
+It is licensed — every weight has to be bought, and the files are not distributed here. The specimen
+below is rendered in a substitute, so it shows hierarchy and proportion rather than the actual letterforms.</p>
+<div class="two"><div>
+<h3>The family</h3>
+<table><tr><th>Family</th><th>Use</th></tr>
+<tr><td><strong>Meta Pro</strong></td><td>All standard applications, every weight</td></tr>
+<tr><td><strong>Meta Headline OT</strong></td><td>Optional for very large type — trade-show stands, posters</td></tr>
+<tr><td><strong>Meta Serif Pro</strong></td><td>Emotional text: quotations, testimonials</td></tr></table>
+<h3>Substitutes</h3>
+<table><tr><th>Instead of</th><th>Use</th><th>When</th></tr>
+<tr><td>Meta Pro</td><td><strong>Arial Unicode MS</strong></td><td>Office applications, Word and PowerPoint templates, Chinese characters</td></tr>
+<tr><td>Meta Serif Pro</td><td><strong>Georgia</strong></td><td>Quotations in substitute settings</td></tr></table>
+<p style="font-size:14px;color:#7a7a82">Meta Pro is deliberately not used in Office applications —
+the Word templates are built on Arial so they render identically on every workstation.</p></div>
+<div><h3>Rules</h3><ul class="rules">
+<li>Primary text colour is <strong>100&nbsp;% black</strong>. BINDER Red for emphasis, grays to
+de-emphasise. White on red or dark backgrounds.</li>
+<li><strong>Minimum size 6&nbsp;pt</strong> — including text inside charts and diagrams.</li>
+<li>Kerning: <strong>optical</strong>.</li>
+<li>Old-style figures in body copy, lining figures in headlines, tabular figures in tables.</li></ul>
+<h3>Hierarchy <span class="tag">A4 reading matter; scale other formats proportionally</span></h3>
+<table><tr><th>Level</th><th>Weight</th><th>Size / leading</th></tr>
+<tr><td>H1</td><td>Bold</td><td>22 / 27.5 pt</td></tr>
+<tr><td>Subline</td><td>Light</td><td>22 / 27.5 pt</td></tr>
+<tr><td>H2</td><td>Book</td><td>15 / 16.5 pt</td></tr>
+<tr><td>H3</td><td>Bold, caps</td><td>10 / 11 pt</td></tr>
+<tr><td>H4</td><td>Book</td><td>9 / 11 pt</td></tr>
+<tr><td>Body</td><td>Book</td><td>9 / 12 pt</td></tr>
+<tr><td>Caption</td><td>Light</td><td>7 / 11 pt</td></tr></table></div></div>
+<h3>Specimen</h3>
+<div class="specimen">
+<div class="sp-h1">Best conditions for your success</div>
+<div class="sp-sub">A subline goes into more detail than the headline above it</div>
+<div class="sp-h2">Heading level two introduces a section</div>
+<div class="sp-h3">Heading level three, set in caps</div>
+<div class="sp-body">Body copy carries the argument. Structure the content before you set it: every
+topic needs exactly one clearly most important headline, and levels may be skipped where they are not
+needed. Content of equal weight gets headlines of equal weight.</div>
+<div class="sp-cap">Captions are set only where they add something the image does not already say.</div>
+</div></section>
+<section><h2>The red line above titles</h2>
+<p class="lead">A short horizontal red line sits directly above main titles — a discreet, distinctive
+element that ties visual communication together. All three measurements derive from the font size,
+so the rule holds at any scale.</p>
+<div class="two"><div><table><tr><th>Property</th><th>Rule</th></tr>
+<tr><td>Colour</td><td>BINDER Red</td></tr>
+<tr><td>Placement</td><td>Directly above the title, always flush left</td></tr>
+<tr><td>Thickness</td><td><strong>0.10 ×</strong> font size</td></tr>
+<tr><td>Length</td><td>Width of the <strong>first three letters</strong> of the title</td></tr>
+<tr><td>Distance to title</td><td><strong>0.3 ×</strong> font size</td></tr></table>
+<p style="font-size:14px;color:#7a7a82">At 50 pt type: thickness 5 pt, distance 16.6 pt.
+At 25 pt type: thickness 2.5 pt, distance 8.3 pt.</p></div>
+<div><svg viewBox="0 0 380 150" width="100%" style="border:1px solid #d8d8dd;background:#fff"
+role="img" aria-label="Diagram of the red line rule">
+<rect x="40" y="42" width="52" height="5" fill="#e60000"/>
+<text x="40" y="97" font-family="Helvetica,Arial" font-size="42" font-weight="bold" fill="#252527">Incubator</text>
+<line x1="40" y1="30" x2="92" y2="30" stroke="#9a9aa1" stroke-width="1"/>
+<text x="66" y="25" font-family="Helvetica,Arial" font-size="10" fill="#7a7a82" text-anchor="middle">first 3 letters</text>
+<line x1="26" y1="47" x2="26" y2="63" stroke="#9a9aa1" stroke-width="1"/>
+<text x="20" y="58" font-family="Helvetica,Arial" font-size="10" fill="#7a7a82" text-anchor="end">0.3 X</text>
+<line x1="100" y1="42" x2="118" y2="42" stroke="#9a9aa1" stroke-width="1"/>
+<line x1="100" y1="47" x2="118" y2="47" stroke="#9a9aa1" stroke-width="1"/>
+<text x="124" y="48" font-family="Helvetica,Arial" font-size="10" fill="#7a7a82">0.10 X</text>
+<line x1="290" y1="63" x2="290" y2="97" stroke="#9a9aa1" stroke-width="1"/>
+<text x="298" y="84" font-family="Helvetica,Arial" font-size="10" fill="#7a7a82">X = font size</text>
+</svg></div></div>
+<h2 style="margin-top:44px">Logo</h2>
+<p class="lead">The logo files are not in this repository yet — request them from the marketing
+department. These rules apply regardless of where you obtained them.</p>
+<div class="two"><div><h3>Clear space and position</h3>
+<p style="font-size:14px">The measure is <strong>X, the height of the Bildmarke</strong>. Keep
+<strong>1.5 × X</strong> clear on all sides — no element may sit inside that zone. Place the logo
+<strong>top right, 2 × X from the format edge</strong>. The positioning distance is not the clear
+space; observe both.</p>
+<svg viewBox="0 0 300 190" width="100%" style="border:1px solid #d8d8dd;background:#fff"
+role="img" aria-label="Diagram of logo clear space">
+<rect x="1" y="1" width="298" height="188" fill="none" stroke="#d8d8dd"/>
+<rect x="168" y="42" width="102" height="44" fill="none" stroke="#e60000" stroke-dasharray="4 3"/>
+<rect x="198" y="56" width="42" height="16" fill="#252527"/>
+<polygon points="186,56 198,56 192,72" fill="#e60000"/>
+<polygon points="174,56 186,56 180,72" fill="#e60000"/>
+<line x1="270" y1="20" x2="270" y2="42" stroke="#9a9aa1"/>
+<text x="276" y="34" font-family="Helvetica,Arial" font-size="9" fill="#7a7a82">2 X</text>
+<text x="219" y="100" font-family="Helvetica,Arial" font-size="9" fill="#e60000" text-anchor="middle">clear space 1.5 X</text>
+<line x1="174" y1="80" x2="174" y2="86" stroke="#9a9aa1"/>
+<text x="150" y="86" font-family="Helvetica,Arial" font-size="9" fill="#7a7a82" text-anchor="end">X = height</text>
+</svg></div>
+<div><h3>Minimum sizes</h3>
+<table><tr><th>Version</th><th>Minimum</th></tr>
+<tr><td>Logo <strong>with</strong> claim</td><td>30 mm</td></tr>
+<tr><td>Logo <strong>without</strong> claim</td><td>20 mm</td></tr>
+<tr><td>Bildmarke alone</td><td>5 mm</td></tr></table>
+<p style="font-size:14px;color:#7a7a82">Below 30 mm logo width, drop the claim — it is no longer legible.</p>
+<h3>Never</h3><ul class="rules">
+<li>Use the word mark without the Bildmarke</li>
+<li>Replace the typeface</li>
+<li>Crop, compress, distort or rotate it</li>
+<li>Add further elements to it</li>
+<li>Recolour it beyond black, white or full colour</li>
+<li>Use the Bildmarke as a bullet, watermark or decoration</li></ul></div></div></section>
+<footer><strong>BINDER GmbH Corporate Design</strong> · Version 2026-01 · <a href="https://github.com/Binder-GmbH/binder-corporate-design">Repository</a> · <a href="mailto:marketing@binder-world.com">marketing@binder-world.com</a><p>The BINDER name, logo and word/figurative marks are protected trademarks of BINDER GmbH. These guidelines are published for legitimate use by press, partners, suppliers and integrators. They transfer no rights in the marks themselves.</p></footer></div><script>document.querySelectorAll(".sw").forEach(function(b){b.addEventListener("click",function(){navigator.clipboard.writeText(b.dataset.hex);b.classList.add("copied");setTimeout(function(){b.classList.remove("copied")},1100);});});</script></body></html>
