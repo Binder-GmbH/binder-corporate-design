@@ -40,16 +40,16 @@ White and black carry no number. They sit outside the ramp, exactly as `$white` 
 | Name | Scale | Hex | CMYK | L\* | Step | CMYK, screen match (not for print) |
 |---|---|---|---|---|---|---|
 | **White** | — | `#ffffff` | 0/0/0/0 | 100.0 | — | 0/0/0/0 |
-| **Porcelain** | 100 | `#f4f4f5` | 0/0/0/5 | 96.2 | 3.8 | 4/4/4/0 |
-| **Pearl** | 200 | `#e6e6e9` | 0/0/0/10 | 91.4 | 4.8 | 11/9/7/0 |
-| **Silver** | 300 | `#d8d8dd` | 0/0/0/20 | 86.5 | 4.9 | 17/14/11/0 |
-| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 | 31/24/20/2 |
-| **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 | 41/33/28/9 |
-| **Slate** | 600 | `#7a7a82` | 0/0/0/60 | 51.5 | 12.3 | 52/43/36/20 |
-| **Basalt** | 700 | `#5a5a5f` | 0/0/0/70 | 38.4 | 13.1 | 60/51/45/37 |
-| **Anthracite** | 800 | `#404043` | 0/0/0/80 | 27.2 | 11.2 | 66/58/52/55 |
-| **Graphite** | 900 | `#252527` | 0/0/0/90 | 14.8 | 12.4 | 73/66/58/75 |
-| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 | 89/78/62/97 |
+| **Porcelain** | 100 | `#f4f4f5` | 0/0/0/5 | 96.2 | 3.8 | 0/0/0/6 |
+| **Pearl** | 200 | `#e6e6e9` | 0/0/0/10 | 91.4 | 4.8 | 1/0/0/13 |
+| **Silver** | 300 | `#d8d8dd` | 0/0/0/20 | 86.5 | 4.9 | 3/4/0/17 |
+| **Ash** | 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 | 8/7/0/30 |
+| **Concrete** | 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 | 9/7/0/45 |
+| **Slate** | 600 | `#7a7a82` | 0/0/0/60 | 51.5 | 12.3 | 11/11/0/59 |
+| **Basalt** | 700 | `#5a5a5f` | 0/0/0/70 | 38.4 | 13.1 | 11/11/0/73 |
+| **Anthracite** | 800 | `#404043` | 0/0/0/80 | 27.2 | 11.2 | 10/12/0/84 |
+| **Graphite** | 900 | `#252527` | 0/0/0/90 | 14.8 | 12.4 | 8/2/0/94 |
+| **Black** | — | `#000000` | 0/0/0/100 | 0.0 | 14.8 | 7/7/0/100 |
 
 L\* is perceived lightness, 0 black to 100 white. Step is the distance to the
 previous gray.
@@ -61,9 +61,10 @@ print in even steps that are lighter than on screen but stay distinguishable fro
 Do not compensate with rich black. Print PDFs are mostly viewed on screen; a PDF viewer
 simulates these values through the document profile, so they look right there too.
 
-The screen-match column is the screen value converted to Coated FOGRA39 the way Photoshop
-and InDesign do it, relative colorimetric with black point compensation: only for a CMYK
-document that is viewed on screen and must match the web colors, never for print.
+The screen-match column is a max-K separation matched to the screen value under Coated
+FOGRA39 with black point compensation: black carries the tone, a few percent of cyan and
+magenta carry the cast. Only for a CMYK document that is viewed on screen and must match
+the web colors, never for print.
 
 The ramp is denser at the light end on purpose: pale surface tones get used over
 large areas, where small differences matter. The dark half steps more widely, because
