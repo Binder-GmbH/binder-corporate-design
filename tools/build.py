@@ -123,8 +123,13 @@ def build_markdown():
            "`font-weight`.", "",
            "White and black carry no number. They sit outside the ramp, exactly as `$white` and",
            "`$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.", "",
-           "| Color | Hex | CMYK |", "|---|---|---|"]
-    md += [f"| {r['name']} | `{r['hex']}` | {r['cmyk']} |" for r in GRAYS]
+           "| Color | Hex | CMYK | L\\* | Step |", "|---|---|---|---|---|"]
+    prev = None
+    for r in GRAYS:
+        L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"; prev = L
+        md.append(f"| {r['name']} | `{r['hex']}` | {r['cmyk']} | {L:.1f} | {step} |")
+    md += ["", "L\\* is perceived lightness, 0 black to 100 white. Step is the distance to the",
+           "previous gray."]
     md += ["", "The ramp is denser at the light end on purpose: pale surface tones get used over",
            "large areas, where small differences matter. The dark half steps more widely, because",
            "the eye separates dark tones less well anyway.", "",
@@ -204,6 +209,11 @@ code{background:var(--g100);padding:1px 6px;border-radius:3px;font-size:13px}
 ul.rules{font-size:14px;line-height:1.75;padding-left:20px}
 footer{padding:34px 44px 50px;border-top:1px solid var(--g300);font-size:13px;color:var(--g700)}
 footer a{color:var(--red)}
+.bar{display:flex;align-items:flex-end;gap:3px;height:180px;margin:26px 0 30px}
+.bar div{flex:1;position:relative;border-radius:2px 2px 0 0}
+.bar span,.bar em{position:absolute;left:0;right:0;text-align:center;font-size:10px;color:var(--g700);font-style:normal}
+.bar span{top:-17px}.bar em{bottom:-18px}
+table.lstar{max-width:560px}
 .seqrow span{display:inline-block;width:16px;height:16px;margin-right:3px;vertical-align:-3px;border-radius:2px}
 @media(max-width:820px){.two{grid-template-columns:1fr}
  .c4,.c5,.c8{grid-template-columns:repeat(4,1fr)}.c11,.c12{grid-template-columns:repeat(6,1fr)}
@@ -249,10 +259,28 @@ def build_page():
     h.append('<h3>Gray scale <span class="tag">100 lightest &middot; 900 darkest &middot; white '
              'and black sit outside the ramp</span></h3><div class="grid c11">')
     for r in GRAYS:
-        h.append(cell(r["name"], r["hex"], r["cmyk"]))
+        h.append(cell(r["name"], r["hex"], r["cmyk"], extra=f"<br>L* {lstar(r['hex']):.1f}"))
     h.append('</div><p class="cap">The scale runs 100 (lightest) to 900 (darkest), the same '
-             'direction as CSS font-weight. It is denser at the light end on purpose: pale surface '
-             'tones get used over large areas, where small differences matter.</p>')
+             'direction as CSS font-weight.</p>')
+
+    h.append('<h3>Lightness of the gray scale <span class="tag">bar height = perceived lightness '
+             'L*, 0 black to 100 white</span></h3><div class="bar">')
+    for r in GRAYS:
+        L = lstar(r["hex"])
+        border = f"border:1px solid {G[300]};" if L > 85 else ""
+        h.append(f'<div style="height:{max(L, 2.5):.1f}%;background:{r["hex"]};{border}">'
+                 f'<span>{r["scale"] or r["name"]}</span><em>{L:.1f}</em></div>')
+    h.append('</div><p class="cap">The ramp is denser at the light end on purpose: pale surface '
+             'tones get used over large areas, where small differences matter. The dark half steps '
+             'more widely, because the eye separates dark tones less well anyway.</p>')
+    h.append('<table class="lstar"><tr><th>Gray</th><th>Hex</th><th>CMYK</th><th>L*</th>'
+             '<th>Step down from the previous</th></tr>')
+    prev = None
+    for r in GRAYS:
+        L = lstar(r["hex"]); step = "—" if prev is None else f"{prev - L:.1f}"
+        h.append(f'<tr><td>{r["name"]}</td><td><code>{r["hex"]}</code></td><td>{r["cmyk"]}</td>'
+                 f'<td>{L:.1f}</td><td>{step}</td></tr>'); prev = L
+    h.append('</table>')
 
     h.append('<h3>Red scale <span class="tag">BINDER Red and Red Dark are brand colors, not ramp '
              'steps</span></h3><div class="grid c5">')

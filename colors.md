@@ -37,19 +37,22 @@ The scale runs 100 (lightest) to 900 (darkest), the same direction as CSS
 White and black carry no number. They sit outside the ramp, exactly as `$white` and
 `$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.
 
-| Color | Hex | CMYK |
-|---|---|---|
-| White | `#ffffff` | 0/0/0/0 |
-| Gray 100 | `#f4f4f5` | 0/0/0/10 |
-| Gray 200 | `#e6e6e9` | 0/0/0/15 |
-| Gray 300 | `#d8d8dd` | 0/0/0/25 |
-| Gray 400 | `#b8b8c0` | 0/0/0/30 |
-| Gray 500 | `#9a9aa1` | 0/0/0/45 |
-| Gray 600 | `#7a7a82` | 0/0/0/50 |
-| Gray 700 | `#5a5a5f` | 0/0/0/65 |
-| Gray 800 | `#404043` | 0/0/0/75 |
-| Gray 900 | `#252527` | 0/0/0/85 |
-| Black | `#000000` | 0/0/0/100 |
+| Color | Hex | CMYK | L\* | Step |
+|---|---|---|---|---|
+| White | `#ffffff` | 0/0/0/0 | 100.0 | — |
+| Gray 100 | `#f4f4f5` | 0/0/0/10 | 96.2 | 3.8 |
+| Gray 200 | `#e6e6e9` | 0/0/0/15 | 91.4 | 4.8 |
+| Gray 300 | `#d8d8dd` | 0/0/0/25 | 86.5 | 4.9 |
+| Gray 400 | `#b8b8c0` | 0/0/0/30 | 75.0 | 11.5 |
+| Gray 500 | `#9a9aa1` | 0/0/0/45 | 63.8 | 11.2 |
+| Gray 600 | `#7a7a82` | 0/0/0/50 | 51.5 | 12.3 |
+| Gray 700 | `#5a5a5f` | 0/0/0/65 | 38.4 | 13.1 |
+| Gray 800 | `#404043` | 0/0/0/75 | 27.2 | 11.2 |
+| Gray 900 | `#252527` | 0/0/0/85 | 14.8 | 12.4 |
+| Black | `#000000` | 0/0/0/100 | 0.0 | 14.8 |
+
+L\* is perceived lightness, 0 black to 100 white. Step is the distance to the
+previous gray.
 
 The ramp is denser at the light end on purpose: pale surface tones get used over
 large areas, where small differences matter. The dark half steps more widely, because
