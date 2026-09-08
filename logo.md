@@ -1,129 +1,75 @@
 # Logo
 
-The BINDER logo is the most important visual element of the brand. Wherever it
-appears it carries associations — leading expertise, high technology, quality
-and precision, innovation, and a modern, credible, confident presence.
-
-> **The logo files are not yet in this repository.** Until they are, request
-> them from the marketing department. Everything below applies regardless of
-> where you obtained the files.
+**→ [Download the logo files](logo/)** — SVG, PNG and PDF in all approved variants.
 
 ## The three parts
 
 | Part | Rule |
 |---|---|
-| **Bildmarke** (the red triangles) | May stand alone only in exceptional cases |
-| **Wortmarke** (the word BINDER) | **Never** appears without the Bildmarke |
+| **Bildmarke** (red triangles) | May stand alone only in exceptional cases |
+| **Wortmarke** (BINDER) | **Never** without the Bildmarke |
 | **Claim** ("Best conditions for your success") | Part of the logo; the only element that may sit below it |
 
-**With or without the claim:** Use the logo **with** claim on informative,
-compact media — business stationery, brochures, flyers. Use it **without**
-claim on bold applications — trade-show stands, advertising banners.
+**With claim** on informative, compact media — stationery, brochures, flyers.
+**Without claim** on bold applications — trade-show stands, banners.
 
-The claim may also be used **detached** from the word mark as an independent
-design element. It is then no longer read as part of the logo, and both gain
-significance from the separation.
+The claim may also be used **detached** as an independent design element.
 
-**The Bildmarke alone** is a stand-in for the logo, permitted only where there
-is genuinely no room for the full logo but clear attribution is required — a
-website favicon, for example. It must sit in immediate, visible proximity to
-the complete logo. It is **not a design element**: never use it as a bullet,
-watermark, pattern or decoration.
+The **Bildmarke alone** is a stand-in where there is no room for the full logo
+but attribution is required — a favicon, for example. It must sit near the
+complete logo, and it is not a design element: never a bullet, watermark or
+decoration.
 
 ## Colour
 
-Use the logo in colour wherever possible. Where that is not an option, use it
-in solid black on white. On dark backgrounds, use it inverted in solid white.
+In colour wherever possible. Otherwise solid black on white, or inverted solid
+white on dark. **No other recolouring.** Coloured backgrounds are fine if
+contrast is sufficient.
 
-**No other recolouring is permitted.** Placement on evenly coloured backgrounds
-is fine, but check that contrast is sufficient and the colour combination is
-harmonious.
+## Clear space and position
 
-## Form
+The measure is **X, the height of the Bildmarke**.
 
-The logo must not be altered. Its arrangement always stays as it is.
+- **Clear space: 1.5 × X** on all sides. Nothing inside that zone.
+- **Position: top right, 2 × X from the format edge.** Regardless of format.
+- The positioning distance is *not* the clear space — observe both.
 
-**Never:** replace the typeface · crop, compress, distort or rotate it · add
-further elements to it · use the word mark without the Bildmarke.
-
-## Clear space
-
-The measure is **X, the height of the Bildmarke**. Keep **1.5 × X** clear on
-all sides. No element may sit inside that zone.
-
-Where the logo is used with the claim, the clear space grows accordingly in
-height — the claim is part of the logo.
-
-## Positioning
-
-**Top right, at a distance of 2 × X from the format edge** (X = height of the
-Bildmarke). This applies regardless of format.
-
-Note that the positioning distance is *not* the clear space. When placing other
-design elements, you have to observe the clear space on top of it.
-
-**Exceptions:**
-
-- **Multimedia** may follow established solutions rather than the strict rule.
-  The logo sits **top left** on the BINDER website; design anything directly
-  connected to it — a newsletter, for instance — consistently that way.
-- **Square social formats** (e.g. a LinkedIn carousel) may place the logo
-  bottom right, but only where top right is genuinely not workable given the
-  layout or text arrangement.
-- **Extreme formats:** If top right makes the logo look shifted off the centre
-  axis, place it centred instead — still aligned to the top, or to the right
-  edge respectively.
+**Exceptions:** The website places the logo top left; design anything connected
+to it the same way. Square social formats may use bottom right where top right
+does not work. In extreme formats, place it centred if top right looks shifted.
 
 ## Sizes
 
-### Print, standard formats
+| Format | Logo width | | Context | Logo width |
+|---|---|---|---|---|
+| DIN A3 | 63 mm | | Mobile (from 480 px) | 175 px |
+| DIN A4 / Letter | 45 mm | | Desktop (from 1024 px) | 190 px |
+| DIN A5 | 32.9 mm | | | |
+| DIN A6 | 22.6 mm | | | |
 
-| Format | Dimensions (mm) | Logo width |
-|---|---|---|
-| DIN A3 | 297 × 420 | 63 mm |
-| DIN A4 | 210 × 297 | 45 mm |
-| Letter | 216 × 279 | 45 mm |
-| DIN A5 | 148 × 210 | 32.9 mm |
-| DIN A6 | 105 × 148 | 22.6 mm |
-
-Height follows from the width. Zoom factor between DIN formats: 1.41.
-
-### Screen
-
-| Context | Viewport | Logo width |
-|---|---|---|
-| Mobile | from 480 px | 175 px |
-| Above mobile | from 1024 px | 190 px |
-
-### Large special formats
-
-| Format | Placement | Use |
-|---|---|---|
-| Extreme landscape | Right third | Logo plus other elements |
-| Extreme landscape | Centred, 1/3 of the area | Logo alone |
-| Extreme portrait | Top third | Logo plus other elements |
-| Extreme portrait | Centred, 1/3 of the area | Logo alone |
+Zoom factor between DIN formats: 1.41.
 
 ### Minimum sizes
 
 | Version | Minimum |
 |---|---|
-| Logo **with** claim | 30 mm |
-| Logo **without** claim | 20 mm |
+| **With** claim | 30 mm |
+| **Without** claim | 20 mm |
 | Bildmarke alone | 5 mm |
 
-**Below 30 mm logo width, drop the claim** — it is no longer legible.
+Below 30 mm width, drop the claim — it is no longer legible.
 
-## Before you place it
+## Colour values in the files
 
-Four questions worth asking, from the manual:
+The supplied files carry `#ed1c24` for red and `#231f20` for black, while the
+corporate design specifies `#e60000` and `#000000`. The difference is visible
+and stems from CMYK-to-RGB conversion. **For screen work, set the colours from
+[colors.md](colors.md)** rather than trusting the values inside the files.
 
-1. **Does the logo make sense on this medium?** Reconsider placing it on every
-   single slide of a presentation — once on the title slide is plenty.
-2. **Is it well positioned?** Legible, free-standing, on a calm background with
-   enough contrast. Other graphic elements keep their distance.
-3. **Is the size right?** The logo should not be the centrepiece or draw the
-   eye to itself. Aim for discreet, restrained placement.
-4. **Does the medium suit the brand message?** If not, choose a different
-   medium or leave the logo off — ashtrays and doormats are the manual's own
-   examples.
+## Never
+
+- Use the word mark without the Bildmarke
+- Replace the typeface
+- Crop, compress, distort or rotate it
+- Add further elements to it
+- Recolour it beyond black, white or full colour

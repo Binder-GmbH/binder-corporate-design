@@ -198,47 +198,63 @@ def build_markdown():
 
 
 TYPO_SECTION = """<section><h2>Typography</h2>
-<p class="lead">The corporate typeface is <strong>FF Meta Pro</strong>, designed by Erik Spiekermann.
-It is licensed — every weight has to be bought, and the files are not distributed here. The specimen
-below is rendered in a substitute, so it shows hierarchy and proportion rather than the actual letterforms.</p>
+<p class="lead">The corporate typeface is <strong>Source Sans 3</strong>, designed by Paul D. Hunt.
+It is <strong>open source and free to use</strong> — no licence has to be purchased. Get it from
+<a href="https://fonts.google.com/specimen/Source+Sans+3">Google Fonts</a>,
+<a href="https://fonts.adobe.com/fonts/source-sans">Adobe Fonts</a> or
+<a href="https://github.com/adobe-fonts/source-sans">GitHub</a>. The specimen below is set in it.</p>
 <div class="two"><div>
-<h3>The family</h3>
-<table><tr><th>Family</th><th>Use</th></tr>
-<tr><td><strong>Meta Pro</strong></td><td>All standard applications, every weight</td></tr>
-<tr><td><strong>Meta Headline OT</strong></td><td>Optional for very large type — trade-show stands, posters</td></tr>
-<tr><td><strong>Meta Serif Pro</strong></td><td>Emotional text: quotations, testimonials</td></tr></table>
+<h3>Loading it on the web</h3>
+<pre style="background:#f4f4f5;padding:14px;font-size:12px;overflow-x:auto;border-radius:3px"><code>&lt;link href="https://fonts.googleapis.com/css2?family=
+Source+Sans+3:wght@300..600&amp;display=swap" rel="stylesheet"&gt;
+
+font-family: "Source Sans 3", Arial, sans-serif;</code></pre>
+<p style="font-size:14px;color:#7a7a82">Weights in use: Light 300, Regular 400, Medium 500,
+SemiBold 600.</p>
 <h3>Substitutes</h3>
 <table><tr><th>Instead of</th><th>Use</th><th>When</th></tr>
-<tr><td>Meta Pro</td><td><strong>Arial Unicode MS</strong></td><td>Office applications, Word and PowerPoint templates, Chinese characters</td></tr>
-<tr><td>Meta Serif Pro</td><td><strong>Georgia</strong></td><td>Quotations in substitute settings</td></tr></table>
-<p style="font-size:14px;color:#7a7a82">Meta Pro is deliberately not used in Office applications —
-the Word templates are built on Arial so they render identically on every workstation.</p></div>
-<div><h3>Rules</h3><ul class="rules">
+<tr><td>Source Sans 3</td><td><strong>Arial Unicode MS</strong></td><td>Office applications and Word
+templates; also covers Chinese characters</td></tr>
+<tr><td>The serif companion</td><td><strong>Georgia</strong></td><td>Quotations in substitute settings</td></tr></table>
+<h3>Rules</h3><ul class="rules">
 <li>Primary text colour is <strong>100&nbsp;% black</strong>. BINDER Red for emphasis, grays to
 de-emphasise. White on red or dark backgrounds.</li>
 <li><strong>Minimum size 6&nbsp;pt</strong> — including text inside charts and diagrams.</li>
 <li>Kerning: <strong>optical</strong>.</li>
 <li>Old-style figures in body copy, lining figures in headlines, tabular figures in tables.</li></ul>
+</div><div>
 <h3>Hierarchy <span class="tag">A4 reading matter; scale other formats proportionally</span></h3>
 <table><tr><th>Level</th><th>Weight</th><th>Size / leading</th></tr>
-<tr><td>H1</td><td>Bold</td><td>22 / 27.5 pt</td></tr>
+<tr><td>H1</td><td>SemiBold</td><td>22 / 27.5 pt</td></tr>
 <tr><td>Subline</td><td>Light</td><td>22 / 27.5 pt</td></tr>
-<tr><td>H2</td><td>Book</td><td>15 / 16.5 pt</td></tr>
-<tr><td>H3</td><td>Bold, caps</td><td>10 / 11 pt</td></tr>
-<tr><td>H4</td><td>Book</td><td>9 / 11 pt</td></tr>
-<tr><td>Body</td><td>Book</td><td>9 / 12 pt</td></tr>
-<tr><td>Caption</td><td>Light</td><td>7 / 11 pt</td></tr></table></div></div>
+<tr><td>H2</td><td>Medium</td><td>15 / 16.5 pt</td></tr>
+<tr><td>H3</td><td>SemiBold, caps</td><td>10 / 11 pt</td></tr>
+<tr><td>H4</td><td>SemiBold</td><td>9 / 11 pt</td></tr>
+<tr><td>Body</td><td>Regular</td><td>8 / 11 pt</td></tr>
+<tr><td>Lists</td><td>Light</td><td>8 / 11 pt</td></tr>
+<tr><td>Captions</td><td>Light</td><td>7 / 11 pt</td></tr>
+<tr><td>Running head</td><td>SemiBold + Light</td><td>8 pt, 65&nbsp;% black</td></tr></table>
+<p style="font-size:14px;color:#7a7a82"><strong>Exception</strong> — product catalogue and price
+list: H1 SemiBold 18 / 22 pt, subline Light 18 / 22 pt. All other levels unchanged.</p>
+</div></div>
 <h3>Specimen</h3>
-<div class="specimen">
-<div class="sp-h1">Best conditions for your success</div>
-<div class="sp-sub">A subline goes into more detail than the headline above it</div>
-<div class="sp-h2">Heading level two introduces a section</div>
-<div class="sp-h3">Heading level three, set in caps</div>
-<div class="sp-body">Body copy carries the argument. Structure the content before you set it: every
-topic needs exactly one clearly most important headline, and levels may be skipped where they are not
-needed. Content of equal weight gets headlines of equal weight.</div>
-<div class="sp-cap">Captions are set only where they add something the image does not already say.</div>
-</div></section>"""
+<div class="specimen" style="font-family:'Source Sans 3',Arial,sans-serif">
+<div class="sp-h1" style="font-weight:600">Best conditions for your success</div>
+<div class="sp-sub" style="font-weight:300">A subline goes into more detail than the headline above it</div>
+<div class="sp-h2" style="font-weight:500">Heading level two introduces a section</div>
+<div class="sp-h3" style="font-weight:600">Heading level three, set in caps</div>
+<div class="sp-body" style="font-weight:400">Body copy carries the argument. Structure the content
+before you set it: every topic needs exactly one clearly most important headline, and levels may be
+skipped where they are not needed. Content of equal weight gets headlines of equal weight.</div>
+<div class="sp-cap" style="font-weight:300">Captions are set only where they add something the image
+does not already say.</div>
+</div>
+<div class="note"><strong>Open question: the serif companion.</strong> The manual still describes a
+serif face for emotional text such as quotations, but names Source Sans 3 for it — which is a
+sans-serif. The same applies to the note on very large font sizes. These read as leftovers from
+replacing the previous typeface throughout the document. Ask the marketing department if you need a
+serif face for a quotation.</div>
+</section>"""
 
 
 LOGO_SECTION = """<section><h2>The red line above titles</h2>
@@ -268,8 +284,39 @@ role="img" aria-label="Diagram of the red line rule">
 <text x="298" y="84" font-family="Helvetica,Arial" font-size="10" fill="#7a7a82">X = font size</text>
 </svg></div></div>
 <h2 style="margin-top:44px">Logo</h2>
-<p class="lead">The logo files are not in this repository yet — request them from the marketing
-department. These rules apply regardless of where you obtained them.</p>
+<p class="lead">Download the files from the repository — SVG for screen, PNG for quick placement,
+PDF for print.</p>
+<div style="background:#f4f4f5;padding:24px;margin-bottom:26px;text-align:center">
+<img src="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo.svg" width="300" alt="BINDER logo">
+</div>
+<table><tr><th>Variant</th><th>Files</th></tr>
+<tr><td><strong>Red and black</strong> — the standard version</td>
+<td><a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo.svg">SVG</a> ·
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/png/binder-logo.png">PNG</a> ·
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/pdf/binder-logo.pdf">PDF</a> &nbsp;|&nbsp; with claim:
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/png/binder-logo-claim.png">PNG</a> ·
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/pdf/binder-logo-claim.pdf">PDF</a></td></tr>
+<tr><td><strong>Solid black</strong></td>
+<td><a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo-black.svg">SVG</a> ·
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/png/binder-logo-black.png">PNG</a> &nbsp;|&nbsp; with claim:
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo-black-claim.svg">SVG</a></td></tr>
+<tr><td><strong>Solid white</strong> — for dark backgrounds</td>
+<td><a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo-white.svg">SVG</a> ·
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/png/binder-logo-white.png">PNG</a> &nbsp;|&nbsp; with claim:
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo-white-claim.svg">SVG</a> ·
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/png/binder-logo-white-claim.png">PNG</a></td></tr>
+<tr><td><strong>Red and white</strong> — for dark backgrounds</td>
+<td><a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo-red-white.svg">SVG</a> &nbsp;|&nbsp; with claim:
+<a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/svg/binder-logo-red-white-claim.svg">SVG</a></td></tr>
+<tr><td><strong>Bildmarke only</strong> — favicons</td>
+<td><a href="https://raw.githubusercontent.com/Binder-GmbH/binder-corporate-design/main/logo/png/binder-icon.png">PNG</a></td></tr></table>
+<p style="font-size:14px"><a href="https://github.com/Binder-GmbH/binder-corporate-design/tree/main/logo">All logo files
+on GitHub →</a> &nbsp; EPS and the sub-brand logos on request from marketing.</p>
+<div class="note"><strong>The files carry different colour values than this corporate design.</strong>
+They contain <code>#ed1c24</code> for red and <code>#231f20</code> for black, while the CD specifies
+<code>#e60000</code> and <code>#000000</code>. Both differences are visible and come from
+CMYK-to-RGB conversion in the print workflow. For screen work, set the colours from the palette
+above rather than trusting the values inside the files.</div>
 <div class="two"><div><h3>Clear space and position</h3>
 <p style="font-size:14px">The measure is <strong>X, the height of the Bildmarke</strong>. Keep
 <strong>1.5 × X</strong> clear on all sides — no element may sit inside that zone. Place the logo
@@ -372,6 +419,8 @@ def build_page():
     h = ['<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">',
          '<meta name="viewport" content="width=device-width,initial-scale=1">',
          '<title>BINDER Corporate Design</title>',
+         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+         '<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300..600&display=swap" rel="stylesheet">',
          f'<style>{PAGE_CSS}</style></head><body><div class="wrap">',
          '<header><div class="rule"></div><h1>BINDER Corporate Design</h1>',
          '<p>Colours, typography and logo rules for anyone producing material in the BINDER '

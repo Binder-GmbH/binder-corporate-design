@@ -15,6 +15,7 @@ partners, suppliers and integrators**.
 | [**colors.md**](colors.md) | Full palette: primaries, gray scale, red scale, chart colours. Hex, CMYK, HKS, Pantone, RAL. |
 | [**typography.md**](typography.md) | FF Meta Pro, the substitutes, type rules and the hierarchy with concrete sizes. |
 | [**logo.md**](logo.md) | Clear space, positioning, minimum sizes, what is and is not permitted. |
+| [**logo/**](logo/) | The logo files themselves — SVG, PNG and PDF in all approved variants. |
 | [**design-principles.md**](design-principles.md) | The black/white/red triad, formal language, and the red line above titles. |
 | [**tokens/**](tokens/) | The palette as [JSON](tokens/colors.json), [CSS custom properties](tokens/colors.css) and [Sass variables](tokens/colors.scss). |
 
@@ -47,13 +48,18 @@ grays carry a slight blue cast on screen but print as pure K. That is
 deliberate: converted exactly, the cast comes to under 6 % cyan, and cyan that
 low cannot be reproduced reliably in offset printing.
 
-**Fonts are not in this repository.** FF Meta Pro is a licensed typeface and
-every weight has to be bought. See [typography.md](typography.md) for sources
-and for the substitutes to use where a licence is not available.
+**The corporate typeface is free.** Source Sans 3 is open source — get it from
+Google Fonts, Adobe Fonts or GitHub, no licence to buy. It replaced FF Meta
+Pro, which was licensed per weight. See [typography.md](typography.md).
+
+**The logo files carry different colour values than the corporate design.**
+They contain `#ed1c24` and `#231f20`; the CD specifies `#e60000` and `#000000`.
+For screen work, take the colours from [colors.md](colors.md).
 
 ## Not here yet
 
-- Logo files (SVG, PNG, EPS) — request from the marketing department
+- EPS files, the Bildmarke as vector, and the sub-brand logos (Customized
+  Solutions, ReFurbished, Quality Management, India, Defence)
 - Document, presentation and print templates
 - Image guidelines and picture material
 
