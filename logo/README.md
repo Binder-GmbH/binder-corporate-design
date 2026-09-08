@@ -59,13 +59,39 @@ EPS files, the Bildmarke as vector, envelope artwork, and the sub-brand logos
 (Customized Solutions, ReFurbished, Quality Management, India, Defence).
 Request them from [marketing@binder-world.com](mailto:marketing@binder-world.com).
 
-## Known issue: colour values
+## Two things to know about these files
 
-The vector and PNG files carry `#ed1c24` for red and `#231f20` for black. The
-corporate design specifies `#e60000` and `#000000`. Both differences are
-visible (ΔE 10.9 and 12.4) and come from CMYK-to-RGB conversion in the print
-workflow rather than from a design decision.
+### The colour values differ from the corporate design
 
-**For screen work, set the colours from [../colors.md](../colors.md)** rather
-than relying on the values inside the files. Corrected versions are pending
-clarification with the marketing department.
+The files carry three different reds and three different blacks between them,
+and none of them is the CD value. Same logo, different file, different colour:
+
+| File | Red | Black |
+|---|---|---|
+| `binder-logo.svg` | `#ed1c24` | `#231f20` |
+| `binder-logo-red-white*.svg` | `#ed1c24` | — |
+| `binder-logo-black*.svg` | — | `#231f20` |
+| `binder-logo.png`, `binder-logo-claim.png`, `binder-icon.png` | `#e30613` | `#1d1d1b` |
+| `binder-logo-black.png` | — | `#000000` ✓ |
+| `binder-logo-white*` | — | `#ffffff` ✓ |
+
+The corporate design specifies **`#e60000`** and **`#000000`**. `#e30613` is
+the RGB rendering of HKS 14; `#ed1c24` matches a US Web Coated conversion of
+CMYK 0/100/100/0. Both look like colour-profile artefacts from different export
+workflows rather than deliberate choices.
+
+**For screen work, set the colours from [../colors.md](../colors.md)** instead
+of relying on what is inside the files. Otherwise the logo carries a different
+red than every other element on the same page.
+
+This is with the marketing department.
+
+### The SVGs are cropped to the artwork
+
+As supplied, every SVG sat on an oversized artboard — between 49 % and 96 %
+empty space, with `binder-logo-white.svg` on a full A4 canvas. Embedded that
+way, the logo renders small and off-centre inside a large invisible margin.
+
+The `viewBox` of each file has been set to the actual bounding box of the
+artwork. **The path data is byte-for-byte unchanged** — only the crop differs.
+Clear space is applied in layout, not baked into the asset.
