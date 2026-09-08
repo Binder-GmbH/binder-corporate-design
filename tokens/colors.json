@@ -1,5 +1,5 @@
 {
-  "$comment": "BINDER corporate colours. Hex applies to screen, CMYK to print. Grays print as pure K: the slight blue cast of the screen values converts to under 6% cyan, below what offset printing reproduces reliably.",
+  "$comment": "BINDER corporate colors. Hex applies to screen, CMYK to print. Grays print as pure K: the slight blue cast of the screen values converts to under 6% cyan, below what offset printing reproduces reliably.",
   "version": "2026",
   "scaleNote": "Nine grays numbered 100 (lightest) to 900 (darkest), the same direction as CSS font-weight. White and Black carry no number: they sit outside the ramp, as $white and $black do in Bootstrap and Tailwind.",
   "primary": {
@@ -31,7 +31,7 @@
       "hex": "#404043",
       "cmyk": "0/0/0/75",
       "scale": 800,
-      "use": "Text and important UI elements — the dark tone that is not black"
+      "use": "Text on screen and important UI elements — the dark tone that is not black"
     },
     "black": {
       "hex": "#000000",
@@ -39,7 +39,7 @@
       "hks": "HKS 88",
       "pantone": "Pantone 426",
       "ral": "RAL 9005 Jet Black",
-      "use": "Primary text colour, base for graphics and icons — avoid large full-coverage areas"
+      "use": "Text in print, base for graphics and icons — avoid large full-coverage areas"
     },
     "binderRed": {
       "hex": "#e60000",
@@ -47,7 +47,7 @@
       "hks": "HKS 14",
       "pantone": "Pantone 485",
       "ral": "RAL 3020 Traffic Red",
-      "use": "Highlight colour, graphic elements, icons, emphasis"
+      "use": "Highlight color, graphic elements, icons, emphasis"
     },
     "redDark": {
       "hex": "#990000",
@@ -160,7 +160,7 @@
   "green": {
     "name": "BINDER Green",
     "hex": "#97bf29",
-    "cmyk": "75/0/100/0",
+    "cmyk": "50/0/95/0",
     "use": "Sustainability and eco topics (BINDER goes green)"
   },
   "chart": [

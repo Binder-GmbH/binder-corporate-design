@@ -1,4 +1,4 @@
-# Colours
+# Colors
 
 The BINDER appearance rests on a triad of **black, white and BINDER Red**. This triad is
 the core of the corporate design and a primary design element in its own right.
@@ -12,19 +12,19 @@ cast on screen but print as pure K with no CMY component: converted exactly, the
 comes to under 6 % cyan, and cyan that low cannot be reproduced reliably in offset
 printing. Use hex on screen and CMYK on paper.
 
-## Primary colours
+## Primary colors
 
-![Primary colours](assets/primary.svg)
+![Primary colors](assets/primary.svg)
 
-| Colour | Hex | CMYK | Print references | Use |
+| Color | Hex | CMYK | Print references | Use |
 |---|---|---|---|---|
 | **White** | `#ffffff` | 0/0/0/0 | RAL 9003 Signal White | Structure, backgrounds, white space, negative applications |
 | **Gray 100** | `#f4f4f5` | 0/0/0/10 | — | Sections, cards, subtle backgrounds |
 | **Gray 300** | `#d8d8dd` | 0/0/0/25 | — | Borders, secondary elements |
 | **Gray 500** | `#9a9aa1` | 0/0/0/45 | — | Muted text, dividers, secondary UI elements |
-| **Gray 800** | `#404043` | 0/0/0/75 | — | Text and important UI elements — the dark tone that is not black |
-| **Black** | `#000000` | 0/0/0/100 | HKS 88, Pantone 426, RAL 9005 Jet Black | Primary text colour, base for graphics and icons — avoid large full-coverage areas |
-| **BINDER Red** | `#e60000` | 0/100/100/0 | HKS 14, Pantone 485, RAL 3020 Traffic Red | Highlight colour, graphic elements, icons, emphasis |
+| **Gray 800** | `#404043` | 0/0/0/75 | — | Text on screen and important UI elements — the dark tone that is not black |
+| **Black** | `#000000` | 0/0/0/100 | HKS 88, Pantone 426, RAL 9005 Jet Black | Text in print, base for graphics and icons — avoid large full-coverage areas |
+| **BINDER Red** | `#e60000` | 0/100/100/0 | HKS 14, Pantone 485, RAL 3020 Traffic Red | Highlight color, graphic elements, icons, emphasis |
 | **Red Dark** | `#990000` | 24/100/100/27 | HKS 16, RAL 3003 Ruby Red | Accent alongside BINDER Red, contrast, mouseover state of red buttons |
 
 ## The gray scale
@@ -37,7 +37,7 @@ The scale runs 100 (lightest) to 900 (darkest), the same direction as CSS
 White and black carry no number. They sit outside the ramp, exactly as `$white` and
 `$black` do in Bootstrap and Tailwind: a `0` would read as `#000`, which is black.
 
-| Colour | Hex | CMYK |
+| Color | Hex | CMYK |
 |---|---|---|
 | White | `#ffffff` | 0/0/0/0 |
 | Gray 100 | `#f4f4f5` | 0/0/0/10 |
@@ -59,7 +59,7 @@ the eye separates dark tones less well anyway.
 
 ![Red scale](assets/scale-red.svg)
 
-| Colour | Hex | CMYK |
+| Color | Hex | CMYK |
 |---|---|---|
 | Red 100 | `#ffcccc` | 0/20/20/0 |
 | Red 200 | `#ff9999` | 0/40/40/0 |
@@ -67,21 +67,21 @@ the eye separates dark tones less well anyway.
 | BINDER Red | `#e60000` | 0/100/100/0 |
 | Red Dark | `#990000` | 24/100/100/27 |
 
-BINDER Red and Red Dark carry no number - they are brand colours, not ramp steps.
+BINDER Red and Red Dark carry no number - they are brand colors, not ramp steps.
 
-**Red Dark** is the accent alongside BINDER Red: a calm, high-grade colour for
+**Red Dark** is the accent alongside BINDER Red: a calm, high-grade color for
 restrained emphasis in graphics and icons, and the mouseover state of a red button.
 
 ## BINDER Green
 
-`#97bf29` - CMYK 75/0/100/0
+`#97bf29` - CMYK 50/0/95/0
 
 For **sustainability and eco topics** (BINDER goes green). Not a general-purpose
 accent - using it elsewhere weakens the black/white/red triad.
 
-## Chart colours
+## Chart colors
 
-![Chart colours](assets/chart.svg)
+![Chart colors](assets/chart.svg)
 
 | Key | Hex | CMYK |
 |---|---|---|
@@ -98,10 +98,10 @@ accent - using it elsewhere weakens the black/white/red triad.
 | K | `#97bf29` | 50/0/95/0 |
 | L | `#bdcd00` | 35/0/100/0 |
 
-### Which colours for how many values
+### Which colors for how many values
 
 Do not pick freely - take the prescribed sequence for the number of values in your
-chart. This keeps charts recognisable across all BINDER media.
+chart. This keeps charts recognizable across all BINDER media.
 
 | Values | Sequence |
 |---|---|

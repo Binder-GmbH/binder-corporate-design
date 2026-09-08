@@ -3,7 +3,7 @@
 ## Source Sans 3
 
 The corporate typeface, designed by Paul D. Hunt. **Open source and free** — no
-licence to buy. Get it from [Google Fonts](https://fonts.google.com/specimen/Source+Sans+3),
+license to buy. Get it from [Google Fonts](https://fonts.google.com/specimen/Source+Sans+3),
 [Adobe Fonts](https://fonts.adobe.com/fonts/source-sans) or [GitHub](https://github.com/adobe-fonts/source-sans).
 
 It replaces the previous corporate typeface FF Meta Pro, which was licensed per
@@ -37,8 +37,8 @@ subline Light 18 / 22 pt. Everything else unchanged.
 
 ## Rules
 
-- Text is **100 % black**. BINDER Red for emphasis, grays to de-emphasise.
-  White on red or dark backgrounds.
+- Text is **100 % black** in print and **Gray 800** (`#404043`) on screen. BINDER Red
+  for emphasis, grays to de-emphasize. White on red or dark backgrounds.
 - **Minimum size 6 pt**, including text in charts and diagrams.
 - Kerning: **optical**.
 - Old-style figures in body copy, lining figures in headlines, tabular figures
@@ -53,11 +53,6 @@ Source Sans 3, also open source and free:
 [Adobe Fonts](https://fonts.adobe.com/fonts/source-serif),
 [GitHub](https://github.com/adobe-fonts/source-serif).
 
-> The manual names Source Sans 3 at this point, which is a sans-serif and
-> cannot be the serif face it describes in the same sentence — a leftover from
-> replacing the previous typeface throughout the document. Source Serif 4 is
-> the counterpart to Source Sans 3 and is used here on that basis; confirmation
-> from marketing is pending.
 
 ## Substitutes
 
